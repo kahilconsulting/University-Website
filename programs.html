@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programs — StudentFlow University</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .programs-filter {
+      padding: 36px 24px 0;
+      background: var(--off-white);
+    }
+    .filter-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      padding: 8px 20px;
+      border-radius: 50px;
+      border: 2px solid var(--gray-300);
+      background: var(--white);
+      color: var(--gray-600);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      border-color: var(--orange);
+      background: var(--orange);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 12.5L4.5 11.3 12 8.5l7.5 2.8L12 15.5zM12 17l-6-3.27V17l6 3 6-3v-3.27L12 17z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">StudentFlow <span>University</span></span>
+          <span class="logo-sub">Excellence in Education</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html" class="active">Programs</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admissions.html" class="btn btn-primary nav-cta">Apply Now</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>Programs</span>
+    </div>
+    <h1>Programs &amp; Courses</h1>
+    <p>Over 120 programs across 6 faculties — from undergraduate degrees to doctoral research. Find the right path for you.</p>
+  </section>
+
+  <!-- ===== FILTER ===== -->
+  <div class="programs-filter">
+    <div class="filter-inner">
+      <button class="filter-btn active">All Faculties</button>
+      <button class="filter-btn">Business &amp; Commerce</button>
+      <button class="filter-btn">Engineering &amp; Technology</button>
+      <button class="filter-btn">Health Sciences</button>
+      <button class="filter-btn">Arts &amp; Design</button>
+      <button class="filter-btn">Law &amp; Justice</button>
+      <button class="filter-btn">Education</button>
+    </div>
+  </div>
+
+  <!-- ===== FACULTY: BUSINESS ===== -->
+  <section class="faculty-section" style="padding-top:60px">
+    <div class="container">
+      <div class="faculty-header">
+        <div class="faculty-icon" style="background:var(--orange-light)">💼</div>
+        <div>
+          <h2>Faculty of Business &amp; Commerce</h2>
+          <p>Preparing the next generation of business leaders, entrepreneurs, and economists.</p>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="courses-table">
+          <thead>
+            <tr>
+              <th>Course Name</th>
+              <th>Level</th>
+              <th>Duration</th>
+              <th>Delivery</th>
+              <th>ATAR / Entry</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="course-name">Bachelor of Business Administration</div><div class="course-code">BBA-001</div></td>
+              <td><span class="tag tag-orange">Undergraduate</span></td>
+              <td><span class="duration-badge">3 Years</span></td>
+              <td>Full-time / Part-time</td>
+              <td>78.00</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Bachelor of Commerce (Accounting)</div><div class="course-code">BCom-002</div></td>
+              <td><span class="tag tag-orange">Undergraduate</span></td>
+              <td><span class="duration-badge">3 Years</span></td>
+              <td>Full-time</td>
+              <td>82.00</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Bachelor of Commerce (Finance)</div><div class="course-code">BCom-003</div></td>
+              <td><span class="tag tag-orange">Undergraduate</span></td>
+              <td><span class="duration-badge">3 Years</span></td>
+              <td>Full-time / Part-time</td>
+              <td>80.00</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Master of Business Administration (MBA)</div><div class="course-code">MBA-101</div></td>
+              <td><span class="tag tag-navy">Postgraduate</span></td>
+              <td><span class="duration-badge">2 Years</span></td>
+              <td>Full-time / Online</td>
+              <td>Work Experience</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Master of Marketing</div><div class="course-code">MMkt-102</div></td>
+              <td><span class="tag tag-navy">Postgraduate</span></td>
+              <td><span class="duration-badge">1.5 Years</span></td>
+              <td>Full-time / Part-time</td>
+              <td>Bachelor's Degree</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FACULTY: ENGINEERING ===== -->
+  <section class="faculty-section">
+    <div class="container">
+      <div class="faculty-header">
+        <div class="faculty-icon" style="background:rgba(61,79,106,0.1)">⚙️</div>
+        <div>
+          <h2>Faculty of Engineering &amp; Technology</h2>
+          <p>Solving the world's most complex challenges through cutting-edge engineering and computer science.</p>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="courses-table">
+          <thead>
+            <tr>
+              <th>Course Name</th>
+              <th>Level</th>
+              <th>Duration</th>
+              <th>Delivery</th>
+              <th>ATAR / Entry</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="course-name">Bachelor of Software Engineering (Hons)</div><div class="course-code">BSE-001</div></td>
+              <td><span class="tag tag-orange">Undergraduate</span></td>
+              <td><span class="duration-badge">4 Years</span></td>
+              <td>Full-time</td>
+              <td>88.00</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Bachelor of Computer Science</div><div class="course-code">BCS-002</div></td>
+              <td><span class="tag tag-orange">Undergraduate</span></td>
+              <td><span class="duration-badge">3 Years</span></td>
+              <td>Full-time / Part-time</td>
+              <td>85.00</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Bachelor of Civil Engineering (Hons)</div><div class="course-code">BCE-003</div></td>
+              <td><span class="tag tag-orange">Undergraduate</span></td>
+              <td><span class="duration-badge">4 Years</span></td>
+              <td>Full-time</td>
+              <td>86.00</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Master of Artificial Intelligence</div><div class="course-code">MAI-101</div></td>
+              <td><span class="tag tag-navy">Postgraduate</span></td>
+              <td><span class="duration-badge">2 Years</span></td>
+              <td>Full-time / Part-time</td>
+              <td>Bachelor's in IT/Science</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Master of Data Science</div><div class="course-code">MDS-102</div></td>
+              <td><span class="tag tag-navy">Postgraduate</span></td>
+              <td><span class="duration-badge">1.5 Years</span></td>
+              <td>Full-time / Online</td>
+              <td>Quantitative Background</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FACULTY: HEALTH ===== -->
+  <section class="faculty-section">
+    <div class="container">
+      <div class="faculty-header">
+        <div class="faculty-icon" style="background:#E0F4F4">⚕️</div>
+        <div>
+          <h2>Faculty of Health Sciences</h2>
+          <p>Training compassionate, skilled health professionals ready to serve communities around the world.</p>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="courses-table">
+          <thead>
+            <tr>
+              <th>Course Name</th>
+              <th>Level</th>
+              <th>Duration</th>
+              <th>Delivery</th>
+              <th>ATAR / Entry</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="course-name">Bachelor of Nursing</div><div class="course-code">BN-001</div></td>
+              <td><span class="tag tag-orange">Undergraduate</span></td>
+              <td><span class="duration-badge">3 Years</span></td>
+              <td>Full-time</td>
+              <td>80.00</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Bachelor of Physiotherapy (Hons)</div><div class="course-code">BPhys-002</div></td>
+              <td><span class="tag tag-orange">Undergraduate</span></td>
+              <td><span class="duration-badge">4 Years</span></td>
+              <td>Full-time</td>
+              <td>90.00</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Master of Public Health</div><div class="course-code">MPH-101</div></td>
+              <td><span class="tag tag-navy">Postgraduate</span></td>
+              <td><span class="duration-badge">2 Years</span></td>
+              <td>Full-time / Part-time</td>
+              <td>Health-related Bachelor's</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Doctor of Medicine (MD)</div><div class="course-code">MD-201</div></td>
+              <td><span class="tag tag-gray">Graduate Entry</span></td>
+              <td><span class="duration-badge">4 Years</span></td>
+              <td>Full-time</td>
+              <td>GAMSAT + Interview</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FACULTY: ARTS ===== -->
+  <section class="faculty-section">
+    <div class="container">
+      <div class="faculty-header">
+        <div class="faculty-icon" style="background:#F3E8FF">🎨</div>
+        <div>
+          <h2>Faculty of Arts &amp; Design</h2>
+          <p>Where creativity, culture, and critical thinking converge to shape the human experience.</p>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="courses-table">
+          <thead>
+            <tr>
+              <th>Course Name</th>
+              <th>Level</th>
+              <th>Duration</th>
+              <th>Delivery</th>
+              <th>ATAR / Entry</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="course-name">Bachelor of Arts (Journalism)</div><div class="course-code">BA-J-001</div></td>
+              <td><span class="tag tag-orange">Undergraduate</span></td>
+              <td><span class="duration-badge">3 Years</span></td>
+              <td>Full-time / Part-time</td>
+              <td>72.00</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Bachelor of Visual Communication Design</div><div class="course-code">BVCD-002</div></td>
+              <td><span class="tag tag-orange">Undergraduate</span></td>
+              <td><span class="duration-badge">3 Years</span></td>
+              <td>Full-time</td>
+              <td>75.00 + Portfolio</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Master of Communication &amp; Media</div><div class="course-code">MCM-101</div></td>
+              <td><span class="tag tag-navy">Postgraduate</span></td>
+              <td><span class="duration-badge">1.5 Years</span></td>
+              <td>Full-time / Part-time</td>
+              <td>Bachelor's Degree</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FACULTY: LAW ===== -->
+  <section class="faculty-section">
+    <div class="container">
+      <div class="faculty-header">
+        <div class="faculty-icon" style="background:#E8F5E9">⚖️</div>
+        <div>
+          <h2>Faculty of Law &amp; Justice</h2>
+          <p>Developing principled legal practitioners and policy leaders who champion justice and equity.</p>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="courses-table">
+          <thead>
+            <tr>
+              <th>Course Name</th>
+              <th>Level</th>
+              <th>Duration</th>
+              <th>Delivery</th>
+              <th>ATAR / Entry</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="course-name">Bachelor of Laws (LLB)</div><div class="course-code">LLB-001</div></td>
+              <td><span class="tag tag-orange">Undergraduate</span></td>
+              <td><span class="duration-badge">4 Years</span></td>
+              <td>Full-time</td>
+              <td>90.00</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Juris Doctor (JD)</div><div class="course-code">JD-201</div></td>
+              <td><span class="tag tag-gray">Graduate Entry</span></td>
+              <td><span class="duration-badge">3 Years</span></td>
+              <td>Full-time</td>
+              <td>Bachelor's Degree + LSAT</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+            <tr>
+              <td><div class="course-name">Master of Laws (LLM)</div><div class="course-code">LLM-101</div></td>
+              <td><span class="tag tag-navy">Postgraduate</span></td>
+              <td><span class="duration-badge">1 Year</span></td>
+              <td>Full-time / Part-time</td>
+              <td>LLB or JD</td>
+              <td><a href="admissions.html" class="btn btn-primary" style="padding:7px 16px;font-size:0.78rem">Apply</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Found Your Program?</h2>
+      <p>Take the next step and submit your application for 2026 intake. Our admissions team is here to help.</p>
+      <div class="cta-actions">
+        <a href="admissions.html" class="btn btn-outline">How to Apply</a>
+        <a href="contact.html" class="btn btn-navy">Ask a Question</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="navbar-logo" style="margin-bottom:0">
+          <div class="logo-mark">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 12.5L4.5 11.3 12 8.5l7.5 2.8L12 15.5zM12 17l-6-3.27V17l6 3 6-3v-3.27L12 17z"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">StudentFlow <span>University</span></span>
+            <span class="logo-sub">Excellence in Education</span>
+          </div>
+        </div>
+        <p class="footer-desc">Empowering students to reach their full potential through world-class education, research, and community engagement since 1978.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">f</a>
+          <a href="#" class="social-link">𝕏</a>
+          <a href="#" class="social-link">in</a>
+          <a href="#" class="social-link">📸</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Student Portal</a></li>
+          <li><a href="#">Library</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Careers Centre</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">📍 1 University Drive, Sydney NSW 2000</a></li>
+          <li><a href="#">📞 +61 2 9000 1234</a></li>
+          <li><a href="#">✉️ info@sfu.edu.au</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 StudentFlow University. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Use · Accessibility</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Filter buttons visual toggle (demo only)
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
