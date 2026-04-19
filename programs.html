@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Programs — StudentFlow University</title>
-  <link rel="stylesheet" href="css/style.css" />
+---
+layout: default
+title: "Programs — StudentFlow University"
+nav: programs
+head_extra: |
   <style>
     .programs-filter {
       padding: 36px 24px 0;
@@ -35,36 +33,16 @@
       color: white;
     }
   </style>
-</head>
-<body>
-
-  <!-- ===== NAVIGATION ===== -->
-  <nav class="navbar">
-    <div class="navbar-inner">
-      <a href="index.html" class="navbar-logo">
-        <div class="logo-mark">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 12.5L4.5 11.3 12 8.5l7.5 2.8L12 15.5zM12 17l-6-3.27V17l6 3 6-3v-3.27L12 17z"/>
-          </svg>
-        </div>
-        <div class="logo-text">
-          <span class="logo-name">StudentFlow <span>University</span></span>
-          <span class="logo-sub">Excellence in Education</span>
-        </div>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="programs.html" class="active">Programs</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="admissions.html" class="btn btn-primary nav-cta">Apply Now</a></li>
-      </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+foot_scripts: |
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+---
 
   <!-- ===== PAGE HERO ===== -->
   <section class="page-hero">
@@ -406,72 +384,3 @@
       </div>
     </div>
   </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="navbar-logo" style="margin-bottom:0">
-          <div class="logo-mark">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 12.5L4.5 11.3 12 8.5l7.5 2.8L12 15.5zM12 17l-6-3.27V17l6 3 6-3v-3.27L12 17z"/>
-            </svg>
-          </div>
-          <div class="logo-text">
-            <span class="logo-name">StudentFlow <span>University</span></span>
-            <span class="logo-sub">Excellence in Education</span>
-          </div>
-        </div>
-        <p class="footer-desc">Empowering students to reach their full potential through world-class education, research, and community engagement since 1978.</p>
-        <div class="social-links">
-          <a href="#" class="social-link">f</a>
-          <a href="#" class="social-link">𝕏</a>
-          <a href="#" class="social-link">in</a>
-          <a href="#" class="social-link">📸</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="programs.html">Programs</a></li>
-          <li><a href="admissions.html">Admissions</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#">Student Portal</a></li>
-          <li><a href="#">Library</a></li>
-          <li><a href="#">Scholarships</a></li>
-          <li><a href="#">Careers Centre</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="#">📍 1 University Drive, Sydney NSW 2000</a></li>
-          <li><a href="#">📞 +61 2 9000 1234</a></li>
-          <li><a href="#">✉️ info@sfu.edu.au</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2025 StudentFlow University. All rights reserved.</span>
-      <span>Privacy Policy · Terms of Use · Accessibility</span>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <script>
-    // Filter buttons visual toggle (demo only)
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', function() {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
-  </script>
-</body>
-</html>

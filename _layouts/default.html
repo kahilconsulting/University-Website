@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (function (a, t, i) { var e = "MSCI"; var s = "Analytics"; var o = e + "queue"; a[o] = a[o] || []; var r = a[e] || function (n) { var t = {}; t[s] = {}; function e(e) { while (e.length) { var r = e.pop(); t[s][r] = function (e) { return function () { a[o].push([e, n, arguments]) } }(r) } } var r = "track"; var i = "set"; e([r + "Event", r + "View", r + "Action", i + "Config", i + "Property", i + "User", "initialize", "teardown"]); return t }(i.name); var n = i.name; if (!a[e]) { a[n] = r[s]; a[o].push(["new", n]); setTimeout(function () { var e = "script"; var r = t.createElement(e); r.async = 1; r.src = i.src; var n = t.getElementsByTagName(e)[0]; n.parentNode.insertBefore(r, n) }, 1) } else { a[n] = new r[s] } if (i.user) { a[n].setUser(i.user) } if (i.props) { for (var c in i.props) { a[n].setProperty(c, i.props[c]) } } a[n].initialize(i.cfg) })(window, document, {
+      src: "https://rdrect-oce1.mkt.dynamics.com/webtracking/WebTracking/WebTracking.bundle.js",
+      name: "MSCI",
+      cfg: {
+        ingestionKey: "f92c0db39f904012a6517b6106aa4fc8-f8e5babc-8b85-4251-86e3-3b6f748b8793-7409",
+        endpointUrl: "https://mobile.events.data.microsoft.com/OneCollector/1.0/",
+        autoCapture: {
+          view: true,
+          click: true
+        },
+        orgInfo: {
+          orgId: "176ae7d8-fe06-f111-aa23-0022489423c5",
+          orgTenantId: "b6973c8a-d118-4d79-a258-5243cf91acf6",
+          orgGeo: "OCE"
+        }
+      }
+    });
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}" />
+  {% if page.head_extra %}{{ page.head_extra }}{% endif %}
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="{{ '/index.html' | relative_url }}" class="navbar-logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 12.5L4.5 11.3 12 8.5l7.5 2.8L12 15.5zM12 17l-6-3.27V17l6 3 6-3v-3.27L12 17z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">StudentFlow <span>University</span></span>
+          <span class="logo-sub">Excellence in Education</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="{{ '/index.html' | relative_url }}"{% if page.nav == 'home' %} class="active"{% endif %}>Home</a></li>
+        <li><a href="{{ '/about.html' | relative_url }}"{% if page.nav == 'about' %} class="active"{% endif %}>About</a></li>
+        <li><a href="{{ '/programs.html' | relative_url }}"{% if page.nav == 'programs' %} class="active"{% endif %}>Programs</a></li>
+        <li><a href="{{ '/admissions.html' | relative_url }}"{% if page.nav == 'admissions' %} class="active"{% endif %}>Admissions</a></li>
+        <li><a href="{{ '/contact.html' | relative_url }}"{% if page.nav == 'contact' %} class="active"{% endif %}>Contact</a></li>
+        <li><a href="{{ '/admissions.html' | relative_url }}" class="btn btn-primary nav-cta">Apply Now</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  {{ content }}
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="navbar-logo" style="margin-bottom:0">
+          <div class="logo-mark">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 12.5L4.5 11.3 12 8.5l7.5 2.8L12 15.5zM12 17l-6-3.27V17l6 3 6-3v-3.27L12 17z"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">StudentFlow <span>University</span></span>
+            <span class="logo-sub">Excellence in Education</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Empowering students to reach their full potential through world-class education,
+          research, and community engagement since 1978.
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="{{ '/about.html' | relative_url }}">About Us</a></li>
+          <li><a href="{{ '/programs.html' | relative_url }}">Programs</a></li>
+          <li><a href="{{ '/admissions.html' | relative_url }}">Admissions</a></li>
+          <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Campus Life</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Student Portal</a></li>
+          <li><a href="#">Library</a></li>
+          <li><a href="#">Course Timetable</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Careers Centre</a></li>
+          <li><a href="#">Alumni</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">📍 1 University Drive, Sydney NSW 2000</a></li>
+          <li><a href="#">📞 +61 2 9000 1234</a></li>
+          <li><a href="#">✉️ info@sfu.edu.au</a></li>
+          <li><a href="#">🕐 Mon–Fri, 8:30am–5:00pm</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 StudentFlow University. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Use · Accessibility</span>
+    </div>
+  </footer>
+
+  <script src="{{ '/js/main.js' | relative_url }}"></script>
+  {% if page.foot_scripts %}{{ page.foot_scripts }}{% endif %}
+</body>
+</html>
