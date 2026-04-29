@@ -3,7 +3,8 @@
     "allow": [
       "Bash(mkdir -p \"c:/Users/DaniKahil/OneDrive/Documents/DataSense_Australia/KahilConsulting/Projects/StudentFlow/Sample University Website/css\")",
       "Bash(mkdir -p \"c:/Users/DaniKahil/OneDrive/Documents/DataSense_Australia/KahilConsulting/Projects/StudentFlow/Sample University Website/js\")",
-      "Bash(mkdir -p \"c:/Users/DaniKahil/OneDrive/Documents/DataSense_Australia/KahilConsulting/Projects/StudentFlow/Sample University Website/images\")"
+      "Bash(mkdir -p \"c:/Users/DaniKahil/OneDrive/Documents/DataSense_Australia/KahilConsulting/Projects/StudentFlow/Sample University Website/images\")",
+      "WebFetch(domain:tarelium.com)"
     ]
   }
 }
