@@ -31,7 +31,7 @@
   <!-- ===== NAVIGATION ===== -->
   <nav class="navbar">
     <div class="navbar-inner">
-      <a href="{{ '/index.html' | relative_url }}" class="navbar-logo">
+      <a href="{{ '/' | relative_url }}" class="navbar-logo">
         <div class="logo-mark">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 12.5L4.5 11.3 12 8.5l7.5 2.8L12 15.5zM12 17l-6-3.27V17l6 3 6-3v-3.27L12 17z"/>
@@ -43,13 +43,13 @@
         </div>
       </a>
       <ul class="nav-links">
-        <li><a href="{{ '/index.html' | relative_url }}"{% if page.nav == 'home' %} class="active"{% endif %}>Home</a></li>
-        <li><a href="{{ '/about.html' | relative_url }}"{% if page.nav == 'about' %} class="active"{% endif %}>About</a></li>
-        <li><a href="{{ '/programs.html' | relative_url }}"{% if page.nav == 'programs' %} class="active"{% endif %}>Programs</a></li>
-        <li><a href="{{ '/admissions.html' | relative_url }}"{% if page.nav == 'admissions' %} class="active"{% endif %}>Admissions</a></li>
-        <li><a href="{{ '/contact.html' | relative_url }}"{% if page.nav == 'contact' %} class="active"{% endif %}>Contact</a></li>
-        <li><a href="{{ '/policies.html' | relative_url }}"{% if page.nav == 'policies' %} class="active"{% endif %}>Policies</a></li>
-        <li><a href="{{ '/admissions.html' | relative_url }}" class="btn btn-primary nav-cta">Apply Now</a></li>
+        <li><a href="{{ '/' | relative_url }}"{% if page.nav == 'home' %} class="active"{% endif %}>Home</a></li>
+        <li><a href="{{ '/about/' | relative_url }}"{% if page.nav == 'about' %} class="active"{% endif %}>About</a></li>
+        <li><a href="{{ '/programs/' | relative_url }}"{% if page.nav == 'programs' %} class="active"{% endif %}>Programs</a></li>
+        <li><a href="{{ '/admissions/' | relative_url }}"{% if page.nav == 'admissions' %} class="active"{% endif %}>Admissions</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}"{% if page.nav == 'contact' %} class="active"{% endif %}>Contact</a></li>
+        <li><a href="{{ '/policies/' | relative_url }}"{% if page.nav == 'policies' %} class="active"{% endif %}>Policies</a></li>
+        <li><a href="{{ '/admissions/' | relative_url }}" class="btn btn-primary nav-cta">Apply Now</a></li>
       </ul>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -88,11 +88,11 @@
       <div class="footer-col">
         <h4>Explore</h4>
         <ul>
-          <li><a href="{{ '/about.html' | relative_url }}">About Us</a></li>
-          <li><a href="{{ '/programs.html' | relative_url }}">Programs</a></li>
-          <li><a href="{{ '/admissions.html' | relative_url }}">Admissions</a></li>
-          <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
-          <li><a href="{{ '/policies.html' | relative_url }}">Policies</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About Us</a></li>
+          <li><a href="{{ '/programs/' | relative_url }}">Programs</a></li>
+          <li><a href="{{ '/admissions/' | relative_url }}">Admissions</a></li>
+          <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+          <li><a href="{{ '/policies/' | relative_url }}">Policies</a></li>
           <li><a href="#">Research</a></li>
           <li><a href="#">Campus Life</a></li>
         </ul>
