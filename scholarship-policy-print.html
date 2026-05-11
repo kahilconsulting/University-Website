@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholarship &amp; Financial Aid Policy — Tarelium Education</title>
+  <style>
+    /* ─── Reset & Base ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal:      #2FA6A4;
+      --navy:      #0F295E;
+      --navy-dark: #0A1F48;
+      --teal-light:#E0F5F4;
+      --gray-bg:   #F4F6F9;
+      --gray-rule: #D1D9E6;
+      --text:      #111827;
+      --text-muted:#4B5563;
+      --font: 'Segoe UI', Arial, sans-serif;
+    }
+
+    html { font-size: 10.5pt; }
+
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      background: #fff;
+      line-height: 1.55;
+    }
+
+    /* ─── Screen wrapper (looks nice on screen) ─── */
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 40px 60px;
+    }
+
+    /* ─── Cover Header ─── */
+    .cover {
+      border-bottom: 4px solid var(--teal);
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+    }
+    .cover-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .cover-logo-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--navy);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .cover-logo-icon svg { width: 26px; height: 26px; fill: #fff; }
+    .cover-logo-text { line-height: 1.2; }
+    .cover-logo-name { font-size: 15pt; font-weight: 700; color: var(--navy); }
+    .cover-logo-name span { color: var(--teal); }
+    .cover-logo-sub { font-size: 8pt; color: var(--text-muted); letter-spacing: 0.04em; text-transform: uppercase; }
+
+    .cover-title { font-size: 22pt; font-weight: 700; color: var(--navy); line-height: 1.2; margin-bottom: 8px; }
+    .cover-subtitle { font-size: 10.5pt; color: var(--text-muted); max-width: 600px; }
+
+    /* ─── Metadata bar ─── */
+    .meta-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 28px;
+      background: var(--gray-bg);
+      border-radius: 8px;
+      padding: 16px 20px;
+      border-left: 4px solid var(--teal);
+    }
+    .meta-item { }
+    .meta-label { font-size: 7.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--teal); margin-bottom: 2px; }
+    .meta-value { font-size: 9pt; color: var(--text); }
+
+    /* ─── Table of Contents ─── */
+    .toc { margin-bottom: 32px; }
+    .toc-title {
+      font-size: 10pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--teal);
+      margin-bottom: 10px;
+    }
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4px 20px;
+    }
+    .toc-item {
+      font-size: 9.5pt;
+      color: var(--navy);
+      padding: 4px 0;
+      border-bottom: 1px solid var(--gray-rule);
+    }
+    .toc-item span { color: var(--teal); font-weight: 700; margin-right: 6px; }
+
+    /* ─── Section ─── */
+    .section { margin-bottom: 36px; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--navy);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+    .section-icon {
+      font-size: 16pt;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .section-title-text {
+      font-size: 13pt;
+      font-weight: 700;
+    }
+    .section-desc {
+      font-size: 8.5pt;
+      opacity: 0.8;
+      margin-top: 1px;
+    }
+
+    /* ─── Cards grid ─── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .cards.one-col { grid-template-columns: 1fr; }
+    .cards.three-col { grid-template-columns: repeat(3, 1fr); }
+
+    .card {
+      background: var(--gray-bg);
+      border-radius: 6px;
+      padding: 14px 16px;
+      border-top: 3px solid var(--teal);
+    }
+    .card h4 {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--gray-rule);
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .card ul li {
+      font-size: 8.5pt;
+      color: var(--text);
+      padding: 4px 0;
+      border-bottom: 1px solid #e9edf3;
+      line-height: 1.4;
+    }
+    .card ul li:last-child { border-bottom: none; }
+    .card ul li strong { color: var(--navy); }
+    .card ul li em { color: var(--text-muted); }
+
+    /* ─── Value boxes ─── */
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .value-grid.two-col { grid-template-columns: repeat(2, 1fr); }
+    .value-grid.three-col { grid-template-columns: repeat(3, 1fr); }
+    .value-grid.five-col { grid-template-columns: repeat(5, 1fr); }
+
+    .value-box {
+      background: #fff;
+      border: 1px solid var(--gray-rule);
+      border-radius: 6px;
+      padding: 10px 12px;
+      border-top: 3px solid var(--navy);
+    }
+    .value-box h5 {
+      font-size: 8pt;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .value-box p { font-size: 8pt; color: var(--text-muted); line-height: 1.4; }
+
+    /* ─── Category cards (3 per row) ─── */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .category-card {
+      background: var(--gray-bg);
+      border-radius: 6px;
+      padding: 12px;
+      border-left: 4px solid var(--teal);
+    }
+    .category-card h4 { font-size: 9pt; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .category-card p { font-size: 8pt; color: var(--text-muted); line-height: 1.4; margin-bottom: 6px; }
+    .tag {
+      display: inline-block;
+      font-size: 7pt;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--teal);
+      color: #fff;
+    }
+    .tag.navy { background: var(--navy); }
+
+    /* ─── Tables ─── */
+    .table-wrap { overflow: visible; margin-bottom: 20px; }
+    .policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8pt;
+    }
+    .policy-table thead tr {
+      background: var(--navy);
+      color: #fff;
+    }
+    .policy-table thead th {
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 8pt;
+      white-space: nowrap;
+    }
+    .policy-table tbody tr:nth-child(even) { background: var(--gray-bg); }
+    .policy-table tbody td {
+      padding: 7px 10px;
+      vertical-align: top;
+      border-bottom: 1px solid var(--gray-rule);
+      line-height: 1.35;
+    }
+    .course-name { font-weight: 700; color: var(--navy); display: block; }
+    .course-code { font-size: 7.5pt; color: var(--teal); margin-top: 2px; }
+    .badge {
+      display: inline-block;
+      font-size: 7pt;
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin-top: 3px;
+      background: var(--teal-light);
+      color: var(--teal);
+      font-style: italic;
+    }
+
+    .status-open    { background: #D1FAE5; color: #065F46; padding: 2px 8px; border-radius: 4px; font-size: 7.5pt; font-weight: 600; }
+    .status-closed  { background: #FEE2E2; color: #991B1B; padding: 2px 8px; border-radius: 4px; font-size: 7.5pt; font-weight: 600; }
+    .status-case    { background: #FEF3C7; color: #92400E; padding: 2px 8px; border-radius: 4px; font-size: 7.5pt; font-weight: 600; }
+
+    /* ─── Sub-heading ─── */
+    .sub-heading {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 18px 0 10px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid var(--teal);
+    }
+
+    /* ─── Principles strip ─── */
+    .principles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 12px; }
+    .principle {
+      background: var(--teal-light);
+      border-radius: 6px;
+      padding: 10px;
+      text-align: center;
+    }
+    .principle h5 { font-size: 8pt; font-weight: 700; color: var(--teal); margin-bottom: 4px; }
+    .principle p  { font-size: 7.5pt; color: var(--text-muted); line-height: 1.35; }
+
+    /* ─── Disclaimer box ─── */
+    .disclaimer {
+      background: #FEF9C3;
+      border-left: 4px solid #CA8A04;
+      padding: 10px 14px;
+      border-radius: 0 6px 6px 0;
+      font-size: 8pt;
+      color: #713F12;
+      margin-top: 12px;
+    }
+
+    /* ─── Print rules ─── */
+    @media print {
+      html { font-size: 9.5pt; }
+      .page-wrap { padding: 0; max-width: 100%; }
+      body { background: #fff; }
+
+      .section { page-break-inside: avoid; }
+      .section-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .meta-bar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .card { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .value-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .category-card { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .policy-table thead tr { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .policy-table tbody tr:nth-child(even) { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .principle { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .tag { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .status-open, .status-closed, .status-case { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .badge { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .disclaimer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+      .cover { page-break-after: avoid; }
+      .toc   { page-break-after: always; }
+
+      h2, h3, h4 { page-break-after: avoid; }
+      .cards, .category-grid, .value-grid { page-break-inside: avoid; }
+      .table-wrap { page-break-inside: avoid; }
+
+      @page {
+        margin: 18mm 16mm 20mm;
+        size: A4;
+      }
+      @page :first { margin-top: 12mm; }
+    }
+
+    /* ─── Print instructions banner (screen only) ─── */
+    .print-tip {
+      background: var(--teal);
+      color: #fff;
+      text-align: center;
+      padding: 10px 24px;
+      font-size: 9pt;
+      font-weight: 600;
+      margin-bottom: 28px;
+      border-radius: 6px;
+    }
+    .print-tip kbd {
+      background: rgba(255,255,255,0.25);
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+      font-size: 9pt;
+    }
+    @media print { .print-tip { display: none; } }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- Print tip (screen only) -->
+  <div class="print-tip">
+    To save as PDF: press <kbd>Ctrl+P</kbd> (Windows) or <kbd>Cmd+P</kbd> (Mac) → select <strong>Save as PDF</strong> → Print
+  </div>
+
+  <!-- ─── COVER ─── -->
+  <div class="cover">
+    <div class="cover-logo">
+      <div class="cover-logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 12.5L4.5 11.3 12 8.5l7.5 2.8L12 15.5zM12 17l-6-3.27V17l6 3 6-3v-3.27L12 17z"/>
+        </svg>
+      </div>
+      <div class="cover-logo-text">
+        <div class="cover-logo-name">Tarelium <span>Education</span></div>
+        <div class="cover-logo-sub">Sample University Website</div>
+      </div>
+    </div>
+    <div class="cover-title">Scholarship &amp; Financial Aid Policy</div>
+    <div class="cover-subtitle">The complete policy governing all scholarship programs, financial aid, government funding arrangements, and emergency assistance administered by Tarelium Education.</div>
+  </div>
+
+  <!-- ─── METADATA ─── -->
+  <div class="meta-bar">
+    <div class="meta-item"><div class="meta-label">Policy Number</div><div class="meta-value">SCH-001-2025</div></div>
+    <div class="meta-item"><div class="meta-label">Effective Date</div><div class="meta-value">1 January 2025</div></div>
+    <div class="meta-item"><div class="meta-label">Review Date</div><div class="meta-value">31 December 2026</div></div>
+    <div class="meta-item"><div class="meta-label">Policy Owner</div><div class="meta-value">Pro Vice-Chancellor (Students)</div></div>
+    <div class="meta-item"><div class="meta-label">Responsible Office</div><div class="meta-value">Student Financial Services</div></div>
+    <div class="meta-item"><div class="meta-label">Related Policies</div><div class="meta-value">Academic Progress · Credit Transfer · Privacy Policy</div></div>
+  </div>
+
+  <!-- ─── TABLE OF CONTENTS ─── -->
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <div class="toc-grid">
+      <div class="toc-item"><span>1</span>Purpose &amp; Scope</div>
+      <div class="toc-item"><span>7</span>Award Conditions</div>
+      <div class="toc-item"><span>2</span>Definitions</div>
+      <div class="toc-item"><span>8</span>Government Financial Aid</div>
+      <div class="toc-item"><span>3</span>Scholarship Categories</div>
+      <div class="toc-item"><span>9</span>Suspension &amp; Cancellation</div>
+      <div class="toc-item"><span>4</span>Scholarship Directory</div>
+      <div class="toc-item"><span>10</span>Reinstatement &amp; Appeals</div>
+      <div class="toc-item"><span>5</span>Eligibility &amp; Selection</div>
+      <div class="toc-item"><span>11</span>Concurrent Awards</div>
+      <div class="toc-item"><span>6</span>Application Process</div>
+      <div class="toc-item"><span>12</span>Tax &amp; Centrelink</div>
+      <div class="toc-item" style="border-bottom:none;"></div>
+      <div class="toc-item" style="border-bottom:none;"><span>13</span>Contact &amp; Administration</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       1. PURPOSE & SCOPE
+       ═══════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🎯</div>
+      <div>
+        <div class="section-title-text">1. Purpose &amp; Scope</div>
+        <div class="section-desc">Policy objectives, guiding principles, and who this policy applies to.</div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h4>1.1 Purpose</h4>
+        <ul>
+          <li>Ensure the fair, transparent, and merit-based distribution of financial awards administered by Tarelium Education.</li>
+          <li>Support access and participation for students from diverse backgrounds, including those experiencing financial hardship, geographic disadvantage, or disability.</li>
+          <li>Recognise and reward academic excellence, community leadership, sporting achievement, and research potential.</li>
+          <li>Comply with the <em>Higher Education Support Act 2003</em> (HESA) and the <em>Privacy Act 1988</em>.</li>
+          <li>Provide a consistent framework for scholarship administration across all Faculties and administrative units.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>1.2 Scope</h4>
+        <ul>
+          <li>Applies to all scholarship, bursary, and financial aid programs administered centrally by Student Financial Services.</li>
+          <li>Covers both domestic and international students, except where specific provisions apply to one group only.</li>
+          <li>Faculty-administered prizes under $500 are governed by the Faculty Prize and Award Procedure, not this policy.</li>
+          <li>External scholarships held by students but administered by third parties are not governed by this policy; however, students must declare them under Section 11.</li>
+          <li>Commonwealth-administered scholarships (e.g. RTP) are subject to additional Commonwealth guidelines that take precedence where they conflict with this policy.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub-heading">1.3 Guiding Principles</div>
+    <div class="principles">
+      <div class="principle"><h5>Equity &amp; Access</h5><p>Designed to reduce barriers and promote participation by all eligible students, regardless of background.</p></div>
+      <div class="principle"><h5>Transparency</h5><p>Selection criteria, award values, and decision-making processes are publicly available and applied consistently.</p></div>
+      <div class="principle"><h5>Natural Justice</h5><p>All applicants and holders are afforded the right to be heard before adverse decisions are made.</p></div>
+      <div class="principle"><h5>Confidentiality</h5><p>All financial information is handled in accordance with the Privacy Act 1988 and the university's Privacy Policy.</p></div>
+      <div class="principle"><h5>Continuous Improvement</h5><p>The scholarship program is reviewed biennially to ensure it remains equitable and aligned with sector best practice.</p></div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       2. DEFINITIONS
+       ═══════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📖</div>
+      <div>
+        <div class="section-title-text">2. Definitions</div>
+        <div class="section-desc">Key terms used throughout this policy and their precise meanings.</div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>Student &amp; Enrolment Terms</h4>
+        <ul>
+          <li><strong>Domestic Student:</strong> Australian citizen, Australian Permanent Resident, or New Zealand citizen.</li>
+          <li><strong>International Student:</strong> A student who holds a temporary visa and is not an Australian citizen or Permanent Resident.</li>
+          <li><strong>Eligible Student:</strong> A student who meets all criteria for a specific scholarship as defined in the Scholarship Directory (Section 4).</li>
+          <li><strong>Scholarship Holder:</strong> A student who has accepted and is currently in receipt of a scholarship award.</li>
+          <li><strong>EFTSL:</strong> Equivalent Full-Time Student Load. 1 EFTSL = a full year of full-time study.</li>
+          <li><strong>Commonwealth-Supported Place (CSP):</strong> A subsidised university place where the student pays a reduced student contribution and the Commonwealth pays the balance.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Award &amp; Financial Terms</h4>
+        <ul>
+          <li><strong>Scholarship:</strong> A financial award granted on the basis of merit, need, or specific criteria, which does not require repayment.</li>
+          <li><strong>Bursary:</strong> A one-time or recurring financial award based primarily on financial need; typically smaller than a scholarship.</li>
+          <li><strong>Stipend:</strong> A regular living allowance payment, primarily associated with research (HDR) scholarships.</li>
+          <li><strong>Tuition Fee Waiver:</strong> A reduction in tuition fees, expressed as a percentage of the applicable annual tuition fee.</li>
+          <li><strong>FEE-HELP:</strong> A Commonwealth loan scheme for eligible students in fee-paying (non-CSP) places. Repaid through the ATO.</li>
+          <li><strong>HECS-HELP:</strong> A Commonwealth loan scheme for CSP students covering the student contribution amount. Repaid via the ATO.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Academic Performance Terms</h4>
+        <ul>
+          <li><strong>GPA:</strong> Grade Point Average — weighted average on a 7-point scale. HD=7, D=6, CR=5, P=4, PC=3, F=1, AF=0.</li>
+          <li><strong>Satisfactory Academic Progress (SAP):</strong> Passing at least 50% of the credit points enrolled in a given semester.</li>
+          <li><strong>Census Date:</strong> The date after which a student is liable for tuition fees and HELP debt. Typically the last business day of Week 4 each semester.</li>
+          <li><strong>Show Cause:</strong> A formal process requiring a student to provide reasons why an adverse action should not proceed.</li>
+          <li><strong>Academic Probation:</strong> A period during which a student must meet defined academic conditions or face exclusion.</li>
+          <li><strong>HDR:</strong> Higher Degree by Research — includes Master of Research (MRes) and Doctor of Philosophy (PhD).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Process Terms</h4>
+        <ul>
+          <li><strong>Scholarship Round:</strong> A defined application and assessment period during which applications for a specific scholarship are accepted and evaluated.</li>
+          <li><strong>Offer Letter:</strong> Formal written communication notifying the student of their selection and setting out conditions of award.</li>
+          <li><strong>Acceptance:</strong> The student's written confirmation that they accept the scholarship and agree to its conditions — due within 14 days of the Offer Letter.</li>
+          <li><strong>Annual Declaration:</strong> A statement required from continuing holders confirming they remain eligible and have not breached any conditions.</li>
+          <li><strong>Scholarship Review Committee:</strong> The internal committee responsible for assessing appeals and complex cases. Chaired by the Pro Vice-Chancellor (Students).</li>
+          <li><strong>Permanent Cancellation:</strong> Termination of the scholarship with no right to reinstatement or re-application for the same award.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       3. SCHOLARSHIP CATEGORIES
+       ═══════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🗂️</div>
+      <div>
+        <div class="section-title-text">3. Scholarship Categories</div>
+        <div class="section-desc">Tarelium Education administers seven categories of scholarship and financial aid.</div>
+      </div>
+    </div>
+    <div class="category-grid">
+      <div class="category-card">
+        <h4>🏆 Merit-Based Scholarships</h4>
+        <p>Awarded on outstanding academic achievement. Typically require a high ATAR. Recipients must maintain a minimum GPA.</p>
+        <span class="tag">SCH-M01 to M05</span>
+      </div>
+      <div class="category-card">
+        <h4>💛 Need-Based (Equity)</h4>
+        <p>Awarded to students experiencing financial hardship or from disadvantaged backgrounds. Income-tested. SAP-based continuation.</p>
+        <span class="tag navy">SCH-N01 to N03</span>
+      </div>
+      <div class="category-card">
+        <h4>🌟 Category-Specific</h4>
+        <p>Targeted awards for Indigenous Australians, students with disabilities, elite athletes, and community leaders.</p>
+        <span class="tag">SCH-C01 to C04</span>
+      </div>
+      <div class="category-card">
+        <h4>🔬 Research (HDR)</h4>
+        <p>Full tuition fee waiver and living allowance stipend for MRes and PhD students. Subject to 6-monthly milestone reviews.</p>
+        <span class="tag navy">SCH-R01 to R02</span>
+      </div>
+      <div class="category-card">
+        <h4>🌏 International Student</h4>
+        <p>Partial tuition fee waivers for high-achieving international students. No living allowances. Higher EFTSL load required.</p>
+        <span class="tag">SCH-I01</span>
+      </div>
+      <div class="category-card">
+        <h4>🏛️ Government Programs</h4>
+        <p>Commonwealth programs: HECS-HELP, FEE-HELP, RTP, OS-HELP, SA-HELP. Subject to additional Commonwealth guidelines.</p>
+        <span class="tag navy">Commonwealth-admin</span>
+      </div>
+      <div class="category-card" style="grid-column: 1 / -1;">
+        <h4>🆘 Emergency Financial Assistance</h4>
+        <p>Non-repayable crisis grants for enrolled students facing unexpected financial hardship. Assessed and disbursed within 5 business days. Not classified as scholarship income for tax or Centrelink purposes. Students may access while also holding a scholarship.</p>
+        <span class="tag">Financial Hardship Emergency Grant &nbsp;|&nbsp; Emergency Accommodation Assistance</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       4. SCHOLARSHIP DIRECTORY
+       ═══════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📋</div>
+      <div>
+        <div class="section-title-text">4. Scholarship Directory</div>
+        <div class="section-desc">Full details of every scholarship administered by Tarelium Education.</div>
+      </div>
+    </div>
+
+    <div class="sub-heading">4.1 Merit-Based Scholarships</div>
+    <div class="table-wrap">
+      <table class="policy-table">
+        <thead>
+          <tr>
+            <th>Scholarship</th>
+            <th>Value (per year)</th>
+            <th>Eligibility</th>
+            <th>Application Round</th>
+            <th>Awarded</th>
+            <th>Min GPA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="course-name">VC Excellence Scholarship</span><div class="course-code">SCH-M01</div></td>
+            <td>100% tuition waiver<span class="badge">Up to 4 yrs UG / 2 yrs PG</span></td>
+            <td>ATAR 99+; domestic; commencing only</td>
+            <td>Oct 1 – Nov 30</td>
+            <td>20 / yr</td>
+            <td>6.0 full-time</td>
+          </tr>
+          <tr>
+            <td><span class="course-name">Faculty Dean's Excellence Award</span><div class="course-code">SCH-M02</div></td>
+            <td>50% tuition waiver<span class="badge">Renewable annually</span></td>
+            <td>ATAR 95–98; domestic</td>
+            <td>Oct 1 – Jan 31</td>
+            <td>Up to 50</td>
+            <td>5.5 full-time</td>
+          </tr>
+          <tr>
+            <td><span class="course-name">Academic Achievement Bursary</span><div class="course-code">SCH-M03</div></td>
+            <td>$5,000 one-time (Sem 1 Yr 1)</td>
+            <td>ATAR 90–94; domestic; commencing</td>
+            <td>Oct 1 – Jan 31</td>
+            <td>100 / yr</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td><span class="course-name">High Achiever Scholarship</span><div class="course-code">SCH-M04</div></td>
+            <td>$3,000 + mentoring access<span class="badge">Renewable annually</span></td>
+            <td>ATAR 85+ or GPA ≥ 5.5 (continuing); domestic</td>
+            <td>Feb 1–Mar 15 &amp; Jul 1–Aug 15</td>
+            <td>200 / yr</td>
+            <td>5.0 full-time</td>
+          </tr>
+          <tr>
+            <td><span class="course-name">Women in STEM Scholarship</span><div class="course-code">SCH-M05</div></td>
+            <td>$6,000 + industry placement support<span class="badge">Renewable annually</span></td>
+            <td>Female-identifying; STEM faculty; domestic; GPA ≥ 5.0</td>
+            <td>Nov 1 – Jan 31</td>
+            <td>40 / yr</td>
+            <td>5.0 full-time</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-heading">4.2 Need-Based (Equity) Scholarships</div>
+    <div class="table-wrap">
+      <table class="policy-table">
+        <thead>
+          <tr>
+            <th>Scholarship</th>
+            <th>Value (per year)</th>
+            <th>Eligibility</th>
+            <th>Application Round</th>
+            <th>Continuation Requirement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="course-name">Equity Access Scholarship</span><div class="course-code">SCH-N01</div></td>
+            <td>Up to $10,000<span class="badge">Income-tested annually</span></td>
+            <td>Financial hardship; household income &lt; $50,000; domestic; low-SES</td>
+            <td>Feb 1–Mar 15 &amp; Jul 1–Aug 15</td>
+            <td>SAP; annual income re-declaration</td>
+          </tr>
+          <tr>
+            <td><span class="course-name">First-in-Family Scholarship</span><div class="course-code">SCH-N02</div></td>
+            <td>$8,000 + tutoring + mentoring<span class="badge">Renewable annually</span></td>
+            <td>First in immediate family at university; domestic; income &lt; $70,000</td>
+            <td>Nov 1 – Jan 15</td>
+            <td>SAP; 2 mentoring sessions/semester</td>
+          </tr>
+          <tr>
+            <td><span class="course-name">Regional &amp; Remote Access Scholarship</span><div class="course-code">SCH-N03</div></td>
+            <td>$7,500 + $2,500 relocation grant (Yr 1)<span class="badge">Renewable annually</span></td>
+            <td>Outer regional/remote/very remote (ASGS); domestic; min 0.5 EFTSL/sem</td>
+            <td>Nov 1 – Jan 31</td>
+            <td>SAP; min 0.5 EFTSL; remain enrolled</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-heading">4.3 Category-Specific Scholarships</div>
+    <div class="table-wrap">
+      <table class="policy-table">
+        <thead>
+          <tr>
+            <th>Scholarship</th>
+            <th>Value (per year)</th>
+            <th>Eligibility</th>
+            <th>Additional Support</th>
+            <th>Continuation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="course-name">Indigenous Australian Success Scholarship</span><div class="course-code">SCH-C01</div></td>
+            <td>Full tuition waiver + $20,000 stipend<span class="badge">Duration of program</span></td>
+            <td>Aboriginal and/or Torres Strait Islander; domestic; commencing Yr 1</td>
+            <td>Indigenous Student Success Unit; cultural mentoring; priority housing</td>
+            <td>SAP; bi-annual meeting with Indigenous Student Adviser</td>
+          </tr>
+          <tr>
+            <td><span class="course-name">Disability Achievement Scholarship</span><div class="course-code">SCH-C02</div></td>
+            <td>$5,000 + $1,500 accessibility supplement<span class="badge">Renewable annually</span></td>
+            <td>Registered with Disability Services; domestic; full- or part-time</td>
+            <td>Reasonable adjustment; priority exam scheduling</td>
+            <td>Remain registered with Disability Services; SAP</td>
+          </tr>
+          <tr>
+            <td><span class="course-name">Sports Excellence Scholarship</span><div class="course-code">SCH-C03</div></td>
+            <td>$4,000 + elite training access + flexible exams<span class="badge">Renewable annually</span></td>
+            <td>Elite/sub-elite athlete (state, national, or international rep); domestic</td>
+            <td>Elite athlete support officer; training schedule accommodation</td>
+            <td>Active competition rep; SAP; Sport &amp; Studies Agreement each semester</td>
+          </tr>
+          <tr>
+            <td><span class="course-name">Community Leadership Award</span><div class="course-code">SCH-C04</div></td>
+            <td>$3,500<span class="badge">Renewable annually</span></td>
+            <td>Demonstrated community leadership; domestic; any program; ATAR/GPA waived</td>
+            <td>Leadership development program; networking events; alumni mentoring</td>
+            <td>Evidence of community contribution each semester; SAP</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-heading">4.4 Research (HDR) Scholarships</div>
+    <div class="table-wrap">
+      <table class="policy-table">
+        <thead>
+          <tr>
+            <th>Scholarship</th>
+            <th>Value</th>
+            <th>Eligibility</th>
+            <th>Duration</th>
+            <th>Continuation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="course-name">Research Training Program (RTP) Scholarship</span><div class="course-code">SCH-R01</div></td>
+            <td>Full tuition offset + ~$32,500 p.a. living stipend (indexed)<span class="badge">Commonwealth-administered</span></td>
+            <td>Domestic/PR; commencing MRes or PhD; First Class Honours or equivalent</td>
+            <td>PhD: 3.5 yrs (+6-month extension on grounds); MRes: 2 yrs</td>
+            <td>6-monthly milestone reviews; full-time; satisfactory progress</td>
+          </tr>
+          <tr>
+            <td><span class="course-name">VC Postgraduate Research Scholarship</span><div class="course-code">SCH-R02</div></td>
+            <td>$35,500 p.a. stipend (tax-exempt) + $1,500 thesis allowance + relocation grant up to $1,000<span class="badge">University-funded</span></td>
+            <td>Domestic; First Class Honours or GPA ≥ 6.5; confirmed supervisory support</td>
+            <td>PhD: 3.5 yrs; MRes: 2 yrs (non-renewable)</td>
+            <td>6-monthly milestone reviews; full-time; no concurrent employment &gt; 0.2 FTE</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-heading">4.5 International Student Scholarships</div>
+    <div class="table-wrap">
+      <table class="policy-table">
+        <thead>
+          <tr>
+            <th>Scholarship</th>
+            <th>Value</th>
+            <th>Eligibility</th>
+            <th>Application Round</th>
+            <th>Min GPA to Continue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="course-name">International Merit Award</span><div class="course-code">SCH-I01</div></td>
+            <td>25% tuition fee waiver per enrolled semester<span class="badge">Renewable each semester</span></td>
+            <td>International students; ATAR equivalent 95+ or prior GPA ≥ 5.5; valid student visa</td>
+            <td>Sem 1: closes Feb 1 / Sem 2: closes Jul 1</td>
+            <td>5.0 / 7.0 per semester; full-time load; no academic integrity breach</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-heading">4.6 Emergency Financial Assistance</div>
+    <div class="cards">
+      <div class="card">
+        <h4>🆘 Financial Hardship Emergency Grant</h4>
+        <ul>
+          <li><strong>Value:</strong> Up to $2,500 per application; maximum $5,000 per calendar year</li>
+          <li><strong>Eligibility:</strong> Any currently enrolled student facing unexpected and severe financial hardship (e.g. medical emergency, domestic violence, loss of employment, natural disaster)</li>
+          <li><strong>Application:</strong> Year-round via Student Financial Services — no set rounds</li>
+          <li><strong>Assessment:</strong> Within 5 business days; urgent cases within 24 hours (flagged by Student Support)</li>
+          <li><strong>Tax/Centrelink:</strong> Not classified as scholarship income — does not affect Centrelink or ATO declarations</li>
+          <li><strong>Note:</strong> May be received simultaneously with a scholarship</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>🏠 Emergency Accommodation Assistance</h4>
+        <ul>
+          <li><strong>Value:</strong> Up to 2 weeks of subsidised on-campus accommodation</li>
+          <li><strong>Eligibility:</strong> Enrolled students who have lost their primary place of residence due to a crisis event</li>
+          <li><strong>Application:</strong> Contact Student Services directly or through the Student Portal</li>
+          <li><strong>Processing:</strong> Within 24 hours for acute cases</li>
+          <li><strong>Additional support:</strong> Referrals to community housing, domestic violence services, and Centrelink available</li>
+          <li><strong>Food Pantry:</strong> Students in emergency accommodation are automatically registered for the campus Food Pantry Program</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       5. ELIGIBILITY & SELECTION
+       ═══════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">✅</div>
+      <div>
+        <div class="section-title-text">5. Eligibility &amp; Selection</div>
+        <div class="section-desc">General eligibility requirements and how applications are assessed and ranked.</div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>5.1 General Eligibility Requirements</h4>
+        <ul>
+          <li><strong>Citizenship / Residency:</strong> For domestic scholarships, the student must be an Australian citizen, Permanent Resident, or NZ citizen at the time of application and throughout the award period.</li>
+          <li><strong>Enrolment Status:</strong> Must be enrolled, or have received a formal offer of enrolment, in an eligible award program.</li>
+          <li><strong>Good Standing:</strong> Must not be currently excluded from the university or subject to a suspension of enrolment.</li>
+          <li><strong>EFTSL Minimum:</strong> Merit-based scholarships require full-time enrolment (1.0 EFTSL/yr); need-based scholarships require minimum 0.5 EFTSL/semester.</li>
+          <li><strong>Concurrent Awards:</strong> Must not hold, or be about to accept, an award that would breach the Concurrent Awards provisions of Section 11.</li>
+          <li><strong>Academic Integrity:</strong> Must not have an unresolved academic integrity finding. A confirmed breach within the preceding 24 months may result in ineligibility at the discretion of the Scholarship Review Committee.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>5.2 Selection &amp; Assessment</h4>
+        <ul>
+          <li><strong>Merit-Based:</strong> Applications ranked by academic performance (ATAR, GPA, or equivalent). Secondary criteria applied if equal.</li>
+          <li><strong>Need-Based:</strong> Assessed against income thresholds and supplementary evidence of hardship. Priority given to students in more severe financial hardship where demand exceeds funds.</li>
+          <li><strong>Category-Specific:</strong> Assessed by a panel including a faculty representative, a student support office member, and the Scholarships Manager. An interview may be required.</li>
+          <li><strong>Research:</strong> Assessed by the Faculty Research Committee on academic track record, research proposal quality, and supervisory capacity.</li>
+          <li><strong>Conflict of Interest:</strong> Any panel member with a relationship to an applicant must declare and recuse themselves.</li>
+          <li><strong>Tied Applications:</strong> The Scholarship Review Committee may award an additional scholarship if budget allows, or prioritise based on relative disadvantage.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sub-heading">5.3 Ineligibility Grounds</div>
+    <div class="value-grid">
+      <div class="value-box"><h5>Incomplete Application</h5><p>Applications missing required documents are not assessed. Students are notified once with 5 business days to provide missing items.</p></div>
+      <div class="value-box"><h5>Late Submission</h5><p>Applications after the closing date are not considered, except where the delay was due to a documented system error by the university.</p></div>
+      <div class="value-box"><h5>Value Cap Reached</h5><p>Students already holding the maximum permitted concurrent scholarship value (Section 11) are ineligible to apply for additional awards until one is relinquished.</p></div>
+      <div class="value-box"><h5>Prior Permanent Cancellation</h5><p>Students who have had a scholarship permanently cancelled for misconduct (including fraud) are permanently ineligible for any university-administered scholarship.</p></div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       6. APPLICATION PROCESS
+       ═══════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📬</div>
+      <div>
+        <div class="section-title-text">6. Application Process</div>
+        <div class="section-desc">How to apply, required documents, and assessment timeline from application to outcome.</div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>6.1 How to Apply (7 Steps)</h4>
+        <ul>
+          <li><strong>Step 1 — Check Eligibility:</strong> Review the Scholarship Directory and confirm you meet all eligibility criteria. Ineligible applications are not assessed.</li>
+          <li><strong>Step 2 — Prepare Documents:</strong> Gather all required supporting documents (see 6.2). Incomplete applications are not assessed.</li>
+          <li><strong>Step 3 — Submit Online:</strong> All applications submitted through the Scholarship Portal at portal.tared.edu.au. Paper applications not accepted.</li>
+          <li><strong>Step 4 — Acknowledgement:</strong> Automatic email acknowledgement within 1 business day of submission.</li>
+          <li><strong>Step 5 — Assessment:</strong> Applications assessed after the round closes. Do not contact Student Financial Services during the assessment period.</li>
+          <li><strong>Step 6 — Notification:</strong> All applicants notified by email within 20 business days of the round closing date.</li>
+          <li><strong>Step 7 — Acceptance:</strong> Successful applicants must accept or decline via the Scholarship Portal within 14 calendar days. Failure to respond is treated as a decline.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>6.2 Required Documents</h4>
+        <ul>
+          <li><strong>All applicants:</strong> Completed online application form; current academic transcript or ATAR notification; citizenship/PR/NZ evidence.</li>
+          <li><strong>Merit-Based:</strong> Academic transcript; personal statement (500 words max); one academic referee.</li>
+          <li><strong>Need-Based:</strong> Financial Hardship Declaration; most recent tax return or Centrelink income statement; supporting evidence of hardship.</li>
+          <li><strong>Category-Specific:</strong> Plus category evidence — e.g. proof of Indigenous heritage; disability registration; athlete verification letter; community service evidence.</li>
+          <li><strong>Research (HDR):</strong> Academic transcript; research proposal (2,000 words); supervisor support letter; publications list; two academic references.</li>
+          <li><strong>International:</strong> All applicable items above; copy of current student visa; English proficiency test results.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sub-heading">6.3 Assessment Timeline (Standard Rounds)</div>
+    <div class="table-wrap">
+      <table class="policy-table">
+        <thead>
+          <tr><th>Stage</th><th>Semester 1 Round</th><th>Semester 2 Round</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="course-name">Applications Open</td><td>1 October</td><td>1 May</td></tr>
+          <tr><td class="course-name">Applications Close</td><td>31 January</td><td>31 July</td></tr>
+          <tr><td class="course-name">Assessment Period</td><td>1 February – 28 February</td><td>1 August – 31 August</td></tr>
+          <tr><td class="course-name">Outcome Notifications</td><td>By 15 March</td><td>By 15 September</td></tr>
+          <tr><td class="course-name">Acceptance Deadline</td><td>29 March</td><td>29 September</td></tr>
+          <tr><td class="course-name">First Payment / Activation</td><td>Week 3, Semester 1</td><td>Week 3, Semester 2</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="value-grid">
+      <div class="value-box"><h5>Referee Contact</h5><p>Referees for merit scholarships are contacted directly by the university. Ensure your referee is available before submitting.</p></div>
+      <div class="value-box"><h5>Portal Deadline</h5><p>The Scholarship Portal closes at 11:59 PM AEDT on the closing date. Late applications are not accepted.</p></div>
+      <div class="value-box"><h5>Multiple Applications</h5><p>You may apply for more than one scholarship in the same round, subject to the Concurrent Awards limits in Section 11.</p></div>
+      <div class="value-box"><h5>Feedback on Refusal</h5><p>Unsuccessful applicants may request written feedback within 10 business days of receiving their outcome notification.</p></div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       7. AWARD CONDITIONS
+       ═══════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📜</div>
+      <div>
+        <div class="section-title-text">7. Award Conditions</div>
+        <div class="section-desc">The obligations of scholarship holders. Failure to meet these conditions may result in suspension or cancellation.</div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>7.1 Academic Performance Requirements</h4>
+        <ul>
+          <li><strong>GPA Thresholds (Merit-Based):</strong> Required GPA per scholarship is specified in the Scholarship Directory (Section 4). Calculated at end of each semester across all completed units.</li>
+          <li><strong>SAP (Need-Based &amp; Category-Specific):</strong> Must pass at least 50% of enrolled credit points each semester.</li>
+          <li><strong>HDR Milestone Reviews:</strong> RTP and VC Research holders must receive a "satisfactory" or "commendable" outcome at every 6-monthly review. An "unsatisfactory" review triggers a Show Cause process.</li>
+          <li><strong>Incomplete Units:</strong> Treated as fails for scholarship GPA and SAP calculations until a final grade is recorded.</li>
+          <li><strong>Repeated Units:</strong> The original failing grade is not removed from GPA calculations, but the passed repeat counts toward SAP for that semester.</li>
+          <li><strong>Withdrawal After Census Date:</strong> Counted as a fail (grade 0) for scholarship purposes unless Special Consideration covering the full semester was granted.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>7.2 Enrolment Load Requirements</h4>
+        <ul>
+          <li><strong>Full-Time Load (Merit-Based):</strong> Minimum 1.0 EFTSL per year (0.5 EFTSL/semester) unless a formal load reduction has been approved by Student Financial Services.</li>
+          <li><strong>Part-Time Exemptions:</strong> Approved for documented medical condition, disability, carer responsibility, or approved industry placement. Must apply before the census date.</li>
+          <li><strong>Pro-Rata Waivers:</strong> Fee waiver scholarships are pro-rated to the actual enrolled load. A 50% tuition waiver at half-time = 25% waiver for that semester.</li>
+          <li><strong>Overload:</strong> Scholarship does not extend to overloaded units unless specified in the Offer Letter.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>7.3 Reporting Obligations</h4>
+        <ul>
+          <li><strong>Annual Declaration:</strong> Submit by 15 March (Sem 1) and 15 August (Sem 2) each year. Late submission suspends payments until received.</li>
+          <li><strong>Change of Program:</strong> Notify Student Financial Services within 10 business days. Scholarships may not automatically transfer.</li>
+          <li><strong>Change of Load:</strong> Notify before census date of any semester in which load falls below the scholarship minimum.</li>
+          <li><strong>Contact Details:</strong> Update in Student Portal within 5 business days of any change.</li>
+          <li><strong>External Scholarships:</strong> Notify within 10 business days of accepting any external scholarship or award.</li>
+          <li><strong>Academic Integrity Allegation:</strong> Notify within 5 business days of receiving formal notification. Payments may be suspended pending investigation.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>7.4 Payment Schedule &amp; Method</h4>
+        <ul>
+          <li><strong>Tuition Fee Waivers:</strong> Applied as a credit on the student's tuition account at the beginning of each semester, before the census date.</li>
+          <li><strong>Cash Awards &amp; Bursaries:</strong> Paid by direct bank transfer in Week 3 of the relevant semester (or as specified in the Offer Letter).</li>
+          <li><strong>Research Stipends (HDR):</strong> Paid fortnightly from the first full fortnight after scholarship acceptance and enrolment confirmation.</li>
+          <li><strong>Relocation Grants:</strong> Paid as a lump sum within 20 business days of receiving evidence of relocation costs.</li>
+          <li><strong>Bank Account Requirements:</strong> Australian bank account in the student's own name only. Must be registered in Student Portal before the first payment date.</li>
+          <li><strong>Unclaimed Payments:</strong> Payments held for more than 60 days following a failed transfer are returned to the Scholarship Fund.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       8. GOVERNMENT FINANCIAL AID
+       ═══════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🏛️</div>
+      <div>
+        <div class="section-title-text">8. Government Financial Aid</div>
+        <div class="section-desc">Commonwealth programs administered by Tarelium Education on behalf of the Australian Government under HESA 2003.</div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>8.1 HECS-HELP (Commonwealth-Supported Students)</h4>
+        <ul>
+          <li><strong>What it is:</strong> A loan scheme for students in Commonwealth-Supported Places (CSPs). The student pays a subsidised "student contribution"; the Commonwealth pays the balance directly to the university.</li>
+          <li><strong>Eligibility:</strong> Australian citizen, NZ citizen, or Permanent Humanitarian Visa holder enrolled in a CSP at an approved provider.</li>
+          <li><strong>How to access:</strong> Submit a <em>Request for Commonwealth Support and HECS-HELP</em> form via the Student Portal by the census date of your first enrolled semester.</li>
+          <li><strong>Repayment:</strong> Via the ATO once income exceeds the minimum repayment threshold (currently $51,550/yr, indexed annually).</li>
+          <li><strong>Student contribution bands (indicative):</strong> Band 1 (Humanities, Education) ~$4,124/yr · Band 2 (Computing, Science, Agriculture) ~$5,864/yr · Band 3 (Law, Medicine, Engineering) ~$13,630/yr.</li>
+          <li><strong>Interaction with scholarships:</strong> Tuition fee waiver scholarships do not reduce the student contribution payable in a CSP — fee waivers apply only to the Commonwealth-funded portion.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>8.2 FEE-HELP (Full-Fee Students)</h4>
+        <ul>
+          <li><strong>What it is:</strong> A loan scheme for eligible students in full-fee paying (non-CSP) places. Lifetime loan cap currently $121,844 (most students) or $174,998 (medicine, dentistry, veterinary science).</li>
+          <li><strong>Eligibility:</strong> Australian citizen; Permanent Resident or NZ citizen studying at least one unit in Australia; not enrolled in a CSP for that unit.</li>
+          <li><strong>How to access:</strong> Submit a <em>FEE-HELP Application</em> form via the Student Portal by the census date each semester.</li>
+          <li><strong>Loan fee:</strong> A 20% loan fee is added for most undergraduate units (does not apply to postgraduate units or VSL).</li>
+          <li><strong>Repayment:</strong> Same mechanism as HECS-HELP via the ATO.</li>
+          <li><strong>Interaction with scholarships:</strong> A tuition fee waiver reduces the tuition charged before FEE-HELP is applied — a 50% waiver means only 50% of the fee is borrowed via FEE-HELP.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>8.3 Other HELP Schemes</h4>
+        <ul>
+          <li><strong>OS-HELP:</strong> Up to $8,948 per 6-month period (indexed) for CSP students studying part of their program overseas. Apply via the Student Portal at least 12 weeks before overseas study commences.</li>
+          <li><strong>SA-HELP:</strong> Covers the Student Services and Amenities Fee (SSAF — max $326/yr, indexed). Students may pay upfront or take an SA-HELP loan via the Student Portal.</li>
+          <li><strong>VET Student Loans (VSL):</strong> Not applicable — Tarelium Education is a higher education provider and does not offer VET qualifications.</li>
+          <li><strong>HELP debt discharge:</strong> HELP debts may be cancelled in full upon the student's death or permanent incapacitation. Applications are made to the ATO.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>8.4 Centrelink Income Support</h4>
+        <ul>
+          <li><strong>Youth Allowance (Student):</strong> For domestic students under 25 studying full-time. Means-tested. Apply via myGov / Services Australia. Max approximately $677/fortnight.</li>
+          <li><strong>Austudy:</strong> For domestic students 25+ studying full-time. Means-tested. Max approximately $677/fortnight.</li>
+          <li><strong>Abstudy:</strong> For Aboriginal and Torres Strait Islander students. More generous than Austudy/Youth Allowance; available full-time and part-time. Apply via Services Australia.</li>
+          <li><strong>DSP and Study:</strong> DSP recipients may study part-time without affecting payments. Full-time study is permitted but Centrelink should be notified. Independent financial advice recommended.</li>
+          <li><strong>Scholarship income and Centrelink:</strong> University scholarship payments exceeding $8,000/yr (for living expenses scholarships) are counted as income for Centrelink purposes and may reduce Youth Allowance or Austudy payments. See Section 12.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="value-grid">
+      <div class="value-box"><h5>Census Date is Critical</h5><p>HELP forms must be submitted by the census date. Late submissions are not accepted and the student becomes personally liable for the full fee.</p></div>
+      <div class="value-box"><h5>HELP Debt is Indexed</h5><p>Outstanding HELP debts are indexed to CPI each year on 1 June. Voluntary repayments can be made at any time via the ATO.</p></div>
+      <div class="value-box"><h5>No Interest</h5><p>HELP is not an interest-bearing loan. Only CPI indexation is applied annually. There is no penalty for taking longer to repay.</p></div>
+      <div class="value-box"><h5>Centrelink Notification</h5><p>Students must notify Centrelink of any scholarship cash payments exceeding $8,000/yr. The university provides annual payment summaries by 31 July.</p></div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       9. SUSPENSION & CANCELLATION
+       ═══════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">⚠️</div>
+      <div>
+        <div class="section-title-text">9. Suspension &amp; Cancellation</div>
+        <div class="section-desc">Grounds, processes, and consequences of scholarship suspension or cancellation.</div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>9.1 Automatic Suspension Triggers</h4>
+        <ul>
+          <li><strong>GPA below threshold:</strong> If cumulative GPA falls below the scholarship minimum at end of any semester, the scholarship is automatically suspended from the following semester.</li>
+          <li><strong>Failure to meet SAP:</strong> For need-based and category-specific scholarships, failing to pass ≥ 50% of enrolled credit points in any semester triggers automatic suspension for the following semester.</li>
+          <li><strong>Load below minimum:</strong> If enrolled load falls below the scholarship minimum without a prior-approved load reduction, suspension takes effect from the census date of the affected semester.</li>
+          <li><strong>Approved Leave of Absence:</strong> Payments suspended for the duration. Not treated as a strike if leave was approved on compassionate or medical grounds.</li>
+          <li><strong>Academic integrity investigation:</strong> Payments suspended upon notification of a formal allegation, pending investigation outcome.</li>
+          <li><strong>Annual Declaration not submitted:</strong> Payments suspended until the declaration is received and approved.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>9.2 Suspension Process &amp; Student Rights</h4>
+        <ul>
+          <li><strong>Written notice:</strong> Student notified in writing (university email) within 5 business days of the trigger event.</li>
+          <li><strong>Show Cause period:</strong> 10 business days from the suspension notice to provide written grounds why suspension should not proceed or should be lifted.</li>
+          <li><strong>Grounds accepted:</strong> Medical emergency, bereavement, domestic violence, natural disaster, or other circumstances beyond the student's control — supported by independent evidence.</li>
+          <li><strong>Decision timeline:</strong> Scholarships Manager makes a decision within 10 business days of receiving the Show Cause response.</li>
+          <li><strong>During suspension:</strong> Student remains enrolled. May still access Student Support services and emergency financial assistance.</li>
+          <li><strong>Duration:</strong> Minimum one full semester. Performance re-assessed at the end of the suspended semester against scholarship conditions.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>9.3 Grounds for Cancellation</h4>
+        <ul>
+          <li><strong>Two consecutive semesters of unsatisfactory performance</strong> while on active scholarship status results in permanent cancellation.</li>
+          <li><strong>Confirmed academic integrity breach</strong> (plagiarism, contract cheating, exam fraud) results in permanent cancellation of all university scholarships held at the time.</li>
+          <li><strong>Fraudulent application:</strong> Providing false information results in permanent cancellation and permanent ineligibility for all future university scholarships. Matter referred to the Academic Integrity Officer.</li>
+          <li><strong>Permanent withdrawal from program:</strong> All associated scholarships are cancelled on the effective date of withdrawal.</li>
+          <li><strong>Failure to respond to Show Cause:</strong> If the student does not respond within the 10-business-day period, the scholarship proceeds to cancellation without further notice.</li>
+          <li><strong>Loss of eligibility criterion:</strong> Permanent loss of a qualifying criterion (e.g. change of citizenship) results in cancellation after a Show Cause process.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>9.4 Repayment of Scholarship Funds</h4>
+        <ul>
+          <li><strong>General rule:</strong> Students are not required to repay scholarship funds already received, unless the scholarship was obtained through fraud or misrepresentation.</li>
+          <li><strong>Fraud / misrepresentation:</strong> The university will seek recovery of all payments made on the basis of fraudulent information, via the student's fee account or civil action.</li>
+          <li><strong>Over-payment:</strong> Recovered from the student's fee account or future payments. Students are notified before recovery.</li>
+          <li><strong>Fee waivers post-census:</strong> Tuition fee waivers already applied are not reversed after the census date — even if the scholarship is later cancelled — unless the cancellation is due to fraud.</li>
+          <li><strong>Advance stipend payments:</strong> A pro-rata amount may be recovered if a scholarship is cancelled mid-semester. Calculation method specified in the cancellation notice.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       10. REINSTATEMENT & APPEALS
+       ═══════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">⚖️</div>
+      <div>
+        <div class="section-title-text">10. Reinstatement &amp; Appeals</div>
+        <div class="section-desc">How to request reinstatement of a suspended scholarship and how to formally appeal a scholarship decision.</div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>10.1 Reinstatement of a Suspended Scholarship</h4>
+        <ul>
+          <li><strong>Eligibility:</strong> A student whose scholarship has been suspended (not cancelled) may apply for reinstatement once they demonstrate they now meet the applicable performance threshold.</li>
+          <li><strong>Limit:</strong> Maximum one reinstatement per scholarship per program. A second suspension after reinstatement is treated as cancellation.</li>
+          <li><strong>Application:</strong> Submit a Scholarship Reinstatement Request via the Scholarship Portal, including current academic transcript, personal statement, and evidence that the circumstances causing the suspension have been resolved.</li>
+          <li><strong>Assessment:</strong> Scholarship Review Committee review within 15 business days of receiving a complete application.</li>
+          <li><strong>Possible outcomes:</strong> Full reinstatement; reinstatement at a reduced scholarship value; or decline of reinstatement.</li>
+          <li><strong>Timing:</strong> Reinstatement takes effect from the start of the next semester (tuition waivers) or the next fortnightly pay cycle (stipends). Not applied retrospectively.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>10.2 Formal Appeals</h4>
+        <ul>
+          <li><strong>Right of appeal:</strong> Any student may appeal a scholarship decision on grounds of: (a) administrative error; (b) failure to consider relevant circumstances; (c) breach of natural justice; or (d) decision not consistent with this policy.</li>
+          <li><strong>Not a re-assessment:</strong> An appeal does not provide an opportunity to re-run the original assessment with new merit-based evidence.</li>
+          <li><strong>How to lodge:</strong> Submit a written appeal to scholarshipappeals@tared.edu.au within 20 business days of receiving the decision being appealed.</li>
+          <li><strong>What to include:</strong> Student ID; decision being appealed; specific grounds; supporting evidence; and the outcome sought.</li>
+          <li><strong>Assessment:</strong> Scholarship Review Committee (not including any member involved in the original decision) — 20 business days to provide a written determination.</li>
+          <li><strong>Possible outcomes:</strong> (a) Uphold original decision; (b) vary the decision; (c) overturn and direct the original decision-maker to remake the decision per the Committee's findings.</li>
+          <li><strong>External review:</strong> If the internal appeal is unsuccessful, students may seek review through the NSW Ombudsman or TEQSA. Contact details provided in the appeal outcome letter.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       11. CONCURRENT AWARDS
+       ═══════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🔗</div>
+      <div>
+        <div class="section-title-text">11. Concurrent Awards</div>
+        <div class="section-desc">Rules governing the holding of multiple scholarships or combining university scholarships with external awards.</div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>11.1 Multiple University Scholarships</h4>
+        <ul>
+          <li><strong>Maximum number:</strong> No more than two Tarelium Education-administered scholarships simultaneously.</li>
+          <li><strong>Maximum value:</strong> Combined value must not exceed 100% of the student's tuition fee liability in any given semester. Cash-value awards (bursaries, stipends) are excluded from this calculation.</li>
+          <li><strong>Complementary combinations (permitted):</strong> For example, First-in-Family (SCH-N02) + High Achiever (SCH-M04) — provided the combined value does not exceed the tuition liability cap.</li>
+          <li><strong>Incompatible combinations:</strong> VC Excellence (SCH-M01) cannot be held with any other merit-based tuition waiver. RTP (SCH-R01) cannot be held with VC Research Scholarship (SCH-R02) or any other university stipend.</li>
+          <li><strong>Emergency grants excluded:</strong> Emergency Financial Assistance grants are excluded from the concurrent value calculation and may be received regardless of scholarship status.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>11.2 External Scholarships &amp; Awards</h4>
+        <ul>
+          <li><strong>Declaration required:</strong> Any external scholarship, bursary, prize, or award exceeding $500/yr must be declared via the Scholarship Portal within 10 business days of acceptance.</li>
+          <li><strong>Effect on university scholarship:</strong> Receipt of an external award does not automatically affect a university scholarship. However, if combined value exceeds 100% of tuition fees, the university scholarship may be pro-rated downward.</li>
+          <li><strong>Employer-sponsored study:</strong> Employer contributions to tuition fees must be declared and are treated as external awards for the concurrent value cap.</li>
+          <li><strong>International government scholarships:</strong> Must be declared. Most are compatible with the International Merit Award, provided the combined value does not exceed 100% of tuition.</li>
+          <li><strong>Failure to declare:</strong> Treated as a breach of scholarship conditions and may result in suspension or cancellation of the university scholarship.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub-heading">11.3 Compatible and Incompatible Combinations — Quick Reference</div>
+    <div class="table-wrap">
+      <table class="policy-table">
+        <thead>
+          <tr><th>Scholarship A</th><th>Scholarship B</th><th>Compatible?</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>VC Excellence (SCH-M01)</td><td>Any other tuition waiver</td><td><span class="status-closed">Incompatible</span></td><td>VC Excellence is a standalone award</td></tr>
+          <tr><td>First-in-Family (SCH-N02)</td><td>High Achiever (SCH-M04)</td><td><span class="status-open">Compatible</span></td><td>Combined value capped at 100% tuition</td></tr>
+          <tr><td>Equity Access (SCH-N01)</td><td>Academic Achievement Bursary (SCH-M03)</td><td><span class="status-open">Compatible</span></td><td>Bursary is one-time; no ongoing conflict</td></tr>
+          <tr><td>RTP Scholarship (SCH-R01)</td><td>VC Research Scholarship (SCH-R02)</td><td><span class="status-closed">Incompatible</span></td><td>Cannot hold two research stipends</td></tr>
+          <tr><td>Disability Achievement (SCH-C02)</td><td>Equity Access (SCH-N01)</td><td><span class="status-open">Compatible</span></td><td>Different categories; subject to value cap</td></tr>
+          <tr><td>Sports Excellence (SCH-C03)</td><td>Faculty Dean's Award (SCH-M02)</td><td><span class="status-case">Case-by-case</span></td><td>Refer to Scholarship Review Committee</td></tr>
+          <tr><td>Any university scholarship</td><td>Financial Hardship Emergency Grant</td><td><span class="status-open">Compatible</span></td><td>Emergency grants are excluded from the cap</td></tr>
+          <tr><td>International Merit Award (SCH-I01)</td><td>Home-country government scholarship</td><td><span class="status-case">Declare &amp; assess</span></td><td>Combined value must not exceed 100% tuition</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       12. TAX & CENTRELINK
+       ═══════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">💰</div>
+      <div>
+        <div class="section-title-text">12. Tax &amp; Centrelink Considerations</div>
+        <div class="section-desc">Tax treatment of scholarship income and interaction with Centrelink income support payments.</div>
+      </div>
+    </div>
+    <div class="disclaimer">
+      This section provides <strong>general information only</strong> and does not constitute financial or tax advice. Students should seek independent advice from the ATO (13 28 61) or a registered tax agent for their individual circumstances.
+    </div>
+    <div class="cards" style="margin-top: 12px;">
+      <div class="card">
+        <h4>12.1 Tax Treatment of Scholarships</h4>
+        <ul>
+          <li><strong>General exemption:</strong> Under section 51-10 of the <em>Income Tax Assessment Act 1997</em>, scholarship income received by a full-time student for the purpose of enabling them to undertake education is generally exempt from income tax.</li>
+          <li><strong>Exempt amounts:</strong> For full-time students — all scholarship amounts not in lieu of salary or wages. Includes tuition waivers, living allowance stipends (RTP, VC Research), and need-based bursaries.</li>
+          <li><strong>Taxable scenarios:</strong> Scholarship is taxable if: (a) paid in lieu of salary or wages; (b) student is part-time (below 0.75 EFTSL/yr); (c) payment is for work performed rather than study support; or (d) scholarship requires the student to provide services (the service component is taxable).</li>
+          <li><strong>Annual payment summary:</strong> Tarelium Education issues all scholarship holders an annual Scholarship Payment Summary by 31 July, listing all payments received in the preceding financial year (1 July – 30 June). Retain for tax return purposes.</li>
+          <li><strong>Withholding tax:</strong> The university does not withhold tax from exempt scholarship payments. Contact the ATO if unsure whether your scholarship is taxable.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>12.2 Centrelink Interaction</h4>
+        <ul>
+          <li><strong>Exempt threshold:</strong> Centrelink does not count scholarship income as ordinary income up to $8,000/yr for living expenses (2024-25 threshold; updated annually). Amounts above this threshold may reduce Youth Allowance or Austudy payments.</li>
+          <li><strong>Tuition waivers:</strong> Not counted as income by Centrelink — no cash changes hands. Only cash payments (bursaries, stipends, grants) are counted.</li>
+          <li><strong>Emergency grants:</strong> Not considered scholarship income by Centrelink and do not affect income-tested payments.</li>
+          <li><strong>Reporting obligation:</strong> Students receiving Youth Allowance, Austudy, or Abstudy must report any scholarship cash payments to Centrelink within 14 days of receipt. The university's Annual Scholarship Payment Summary is accepted by Services Australia for this purpose.</li>
+          <li><strong>RTP / VC Research Stipend:</strong> Typically exempt from both income tax and Centrelink income testing, as they meet the full-time education scholarship exemption criteria. Students should confirm with Services Australia for their individual circumstances.</li>
+          <li><strong>Load reduction effect:</strong> Reducing to part-time load may change both tax position and Centrelink entitlements. Contact the ATO and Services Australia before reducing load.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="value-grid">
+      <div class="value-box"><h5>ATO Helpline</h5><p>Tax questions about your scholarship: call ATO at 13 28 61 or visit ato.gov.au. Quote your TFN when calling.</p></div>
+      <div class="value-box"><h5>Services Australia</h5><p>Centrelink questions: call Services Australia at 13 24 90 (Students) or visit servicesaustralia.gov.au.</p></div>
+      <div class="value-box"><h5>Financial Counselling</h5><p>Free, confidential financial counselling available through Student Services. Book via the Student Portal — no referral needed.</p></div>
+      <div class="value-box"><h5>TFN on File</h5><p>All scholarship cash payments require a Tax File Number (TFN) on file. Register your TFN in the Student Portal before your first payment date.</p></div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       13. CONTACT & ADMINISTRATION
+       ═══════════════════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📞</div>
+      <div>
+        <div class="section-title-text">13. Contact &amp; Administration</div>
+        <div class="section-desc">Who to contact for scholarship enquiries, how this policy is administered, and where to find further information.</div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4>Student Financial Services</h4>
+        <ul>
+          <li>📍 Level 2, Student Services Building, 1 University Drive, Sydney NSW 2000</li>
+          <li>📞 +61 2 9000 2000</li>
+          <li>✉️ scholarships@tared.edu.au</li>
+          <li>🕐 Monday to Friday, 9:00 AM – 5:00 PM AEST</li>
+          <li>Walk-in consultations: Monday, Wednesday, and Friday 10:00 AM – 3:00 PM (no appointment required)</li>
+          <li>Complex queries: book an appointment via the Student Portal</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Specialist Contacts</h4>
+        <ul>
+          <li>🔬 <strong>Research scholarships (RTP, VCRPS):</strong> Research Office — research@tared.edu.au</li>
+          <li>🌿 <strong>Indigenous Success Scholarship:</strong> Indigenous Student Success Unit — indigenous.success@tared.edu.au</li>
+          <li>♿ <strong>Disability Achievement Scholarship:</strong> Disability Services — disability@tared.edu.au</li>
+          <li>🏅 <strong>Sports Excellence Scholarship:</strong> Sport &amp; Wellbeing Centre — sport@tared.edu.au</li>
+          <li>⚖️ <strong>Scholarship appeals:</strong> Scholarship Appeals Officer — scholarshipappeals@tared.edu.au</li>
+          <li>🆘 <strong>Emergency financial assistance:</strong> Student Crisis &amp; Welfare Team — welfare@tared.edu.au | 24/7 crisis line: +61 2 9000 2100</li>
+        </ul>
+      </div>
+    </div>
+    <div class="value-grid">
+      <div class="value-box"><h5>Policy Queries</h5><p>Questions about this policy should be directed to Student Financial Services. Staff cannot make exceptions outside the formal appeal process.</p></div>
+      <div class="value-box"><h5>Policy Review</h5><p>This policy is reviewed every two years, or earlier if required by legislative change. Amendments take effect from the date published on the university website.</p></div>
+      <div class="value-box"><h5>Accessible Formats</h5><p>This policy is available in alternate formats (large print, audio) on request from Student Services. Contact access@tared.edu.au.</p></div>
+      <div class="value-box"><h5>Language Assistance</h5><p>TIS National is available for students requiring interpretation assistance when understanding this policy. Call 13 14 50 (free for CALD community members).</p></div>
+    </div>
+  </div>
+
+  <!-- Footer rule -->
+  <div style="border-top: 2px solid var(--gray-rule); margin-top: 40px; padding-top: 14px; display: flex; justify-content: space-between; font-size: 8pt; color: var(--text-muted);">
+    <span>Tarelium Education · Scholarship &amp; Financial Aid Policy · SCH-001-2025</span>
+    <span>Effective 1 January 2025 · Review 31 December 2026</span>
+  </div>
+
+</div>
+</body>
+</html>
