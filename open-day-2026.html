@@ -1,0 +1,328 @@
+---
+layout: default
+title: "Open Day 2026 — Tarelium Education"
+nav: events
+permalink: /events/open-day-2026
+head_extra: |
+  <style>
+    /* ── Open Day hero ── */
+    .openday-hero {
+      background: var(--navy);
+      color: #fff;
+      padding: 72px 24px 56px;
+    }
+    .openday-hero .container {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+    }
+    .openday-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 18px;
+    }
+    .openday-hero h1 {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .openday-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      margin-bottom: 20px;
+    }
+    .openday-meta span { display: flex; align-items: center; gap: 7px; }
+    .openday-hero p {
+      font-size: 0.95rem;
+      opacity: 0.82;
+      line-height: 1.65;
+      max-width: 580px;
+    }
+    .openday-date-block {
+      background: var(--orange);
+      border-radius: 14px;
+      padding: 32px 36px;
+      text-align: center;
+      min-width: 140px;
+      flex-shrink: 0;
+    }
+    .openday-date-block .day { font-size: 3.4rem; font-weight: 700; line-height: 1; display: block; }
+    .openday-date-block .mon { font-size: 1.1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-top: 6px; }
+    .openday-date-block .yr  { font-size: 0.85rem; opacity: 0.85; display: block; margin-top: 5px; }
+
+    /* ── Highlights strip ── */
+    .highlights-strip {
+      background: #f7f8fa;
+      border-bottom: 1px solid var(--gray-100);
+      padding: 36px 24px;
+    }
+    .highlights-strip .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+    }
+    .highlight-item {
+      text-align: center;
+    }
+    .highlight-item .hi-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .highlight-item h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 4px;
+    }
+    .highlight-item p {
+      font-size: 0.8rem;
+      color: var(--gray-600);
+      margin: 0;
+    }
+
+    /* ── Registration section ── */
+    .registration-section {
+      padding: 64px 24px;
+    }
+    .registration-section .container {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .reg-info h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .reg-info p {
+      font-size: 0.92rem;
+      color: var(--gray-600);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .reg-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+    }
+    .reg-checklist li {
+      font-size: 0.88rem;
+      color: var(--navy);
+      padding: 7px 0;
+      border-bottom: 1px solid var(--gray-100);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .reg-checklist li:last-child { border-bottom: none; }
+    .reg-checklist .check {
+      width: 20px;
+      height: 20px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .reg-form-wrap {
+      background: #fff;
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      padding: 36px;
+    }
+    .reg-form-wrap h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .reg-form-wrap .form-subtitle {
+      font-size: 0.83rem;
+      color: var(--gray-600);
+      margin-bottom: 28px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .openday-hero .container { grid-template-columns: 1fr; }
+      .openday-date-block { display: none; }
+      .registration-section .container { grid-template-columns: 1fr; }
+    }
+  </style>
+---
+
+<!-- ===== OPEN DAY HERO ===== -->
+<section class="openday-hero">
+  <div class="container">
+    <div>
+      <div class="breadcrumb" style="margin-bottom:20px;">
+        <a href="/" style="color:rgba(255,255,255,0.7);">Home</a>
+        <span style="color:rgba(255,255,255,0.5);">›</span>
+        <a href="/events/" style="color:rgba(255,255,255,0.7);">Events</a>
+        <span style="color:rgba(255,255,255,0.5);">›</span>
+        <span style="color:#fff;">Open Day 2026</span>
+      </div>
+      <div class="openday-badge">⭐ Featured Event</div>
+      <h1>Open Day 2026 — Main Campus</h1>
+      <div class="openday-meta">
+        <span>📅 Saturday, 11 July 2026</span>
+        <span>🕙 9:00 AM – 3:00 PM AEST</span>
+        <span>📍 1 University Drive, Sydney NSW 2000</span>
+        <span>🎓 All prospective students &amp; families</span>
+        <span>💰 Free entry</span>
+      </div>
+      <p>Our biggest event of the year — explore every faculty, talk to current students and academics, attend live information sessions, tour the campus, and discover everything Tarelium Education has to offer.</p>
+    </div>
+    <div class="openday-date-block">
+      <span class="day">11</span>
+      <span class="mon">Jul</span>
+      <span class="yr">2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HIGHLIGHTS STRIP ===== -->
+<section class="highlights-strip">
+  <div class="container">
+    <div class="highlight-item">
+      <span class="hi-icon">🏛️</span>
+      <h4>Campus Tours</h4>
+      <p>Guided tours of all buildings, residences, labs, and facilities</p>
+    </div>
+    <div class="highlight-item">
+      <span class="hi-icon">🎓</span>
+      <h4>Faculty Sessions</h4>
+      <p>Live information sessions across every school and faculty</p>
+    </div>
+    <div class="highlight-item">
+      <span class="hi-icon">💬</span>
+      <h4>Meet Academics</h4>
+      <p>Q&amp;A with lecturers, researchers, and current students</p>
+    </div>
+    <div class="highlight-item">
+      <span class="hi-icon">🏅</span>
+      <h4>Scholarships Q&amp;A</h4>
+      <p>Speak directly with Student Financial Services</p>
+    </div>
+    <div class="highlight-item">
+      <span class="hi-icon">🍽️</span>
+      <h4>Free Refreshments</h4>
+      <p>Complimentary morning tea and lunch for all attendees</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REGISTRATION ===== -->
+<section class="registration-section">
+  <div class="container">
+
+    <!-- Left: info -->
+    <div class="reg-info">
+      <span class="section-label">Register to Attend</span>
+      <h2>Secure Your Spot</h2>
+      <p>Registration is free and takes just a few minutes. We recommend registering so we can send you your personalised schedule, campus map, and any day-of updates.</p>
+
+      <ul class="reg-checklist">
+        <li><span class="check">✓</span> Free entry — no ticket required on the day once registered</li>
+        <li><span class="check">✓</span> Personalised event schedule emailed before the day</li>
+        <li><span class="check">✓</span> Campus map and parking information included</li>
+        <li><span class="check">✓</span> Walk-ins welcome, registration strongly recommended</li>
+        <li><span class="check">✓</span> Accessible facilities available — contact us for specific needs</li>
+      </ul>
+
+      <p style="font-size:0.85rem; color:var(--gray-600);">Questions? Contact our Student Experience team at <strong>events@tarelium-edu.com</strong> or call <strong>+61 2 9000 1234</strong>.</p>
+    </div>
+
+    <!-- Right: Dynamics 365 registration form -->
+    <div class="reg-form-wrap">
+      <h3>Open Day 2026 Registration</h3>
+      <p class="form-subtitle">Saturday 11 July 2026 · 9:00 AM – 3:00 PM · Main Campus, Sydney</p>
+
+      <div
+        data-form-id='35124c15-bc1c-441b-9ecc-e39fbd0d2a5e'
+        data-form-api-url='https://public-oce.mkt.dynamics.com/api/v1.0/orgs/176ae7d8-fe06-f111-aa23-0022489423c5/eventmanagement'
+        data-cached-form-url='https://assets1-oce.mkt.dynamics.com/176ae7d8-fe06-f111-aa23-0022489423c5/digitalassets/forms/35124c15-bc1c-441b-9ecc-e39fbd0d2a5e'
+        data-readable-event-id='Tarelium_Education_Open_Day543438412'></div>
+      <script src='https://formui-usa1.mkt.dynamics.com/oce/FormLoader/FormLoader.bundle.js'></script>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== WHAT TO EXPECT ===== -->
+<section class="faculty-section">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:36px;">
+      <span class="section-label">Schedule</span>
+      <h2 class="section-title">What to Expect on the Day</h2>
+      <p class="section-subtitle">A full day of activities to help you make your study decision with confidence.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon" style="background:var(--orange-light);">🕙</div>
+        <h3>9:00 AM — Doors Open</h3>
+        <p>Arrive from 9:00 AM. Collect your welcome pack and personalised schedule from the main registration marquee at the University Drive entrance.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:rgba(15,41,94,0.08);">🎤</div>
+        <h3>9:30 AM — Welcome Address</h3>
+        <p>Vice-Chancellor's welcome in the Great Hall, followed by a panel of current students sharing their Tarelium experience.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:var(--orange-light);">🏛️</div>
+        <h3>10:00 AM — Campus Tours</h3>
+        <p>Guided tours depart every 20 minutes. Choose from a general campus tour or faculty-specific tours covering labs, studios, and specialised facilities.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:rgba(15,41,94,0.08);">📚</div>
+        <h3>10:30 AM – 1:00 PM — Faculty Sessions</h3>
+        <p>Parallel information sessions across all faculties. Speak with academics, get program details, entry requirements, and career outcomes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:var(--orange-light);">🍽️</div>
+        <h3>1:00 PM — Lunch Break</h3>
+        <p>Complimentary lunch served on the Central Lawn. Live music, student club stalls, and informal networking with current students.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:rgba(15,41,94,0.08);">🏅</div>
+        <h3>1:30 PM – 3:00 PM — Scholarships &amp; Wrap-Up</h3>
+        <p>Scholarship Q&amp;A session, final campus tours, and one-on-one appointments with admissions advisors. Doors close at 3:00 PM.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Can't Make It on the Day?</h2>
+    <p>Explore our programs online, book a virtual campus tour, or contact our Admissions team for a personalised conversation about your study options.</p>
+    <div class="cta-actions">
+      <a href="/programs/" class="btn btn-outline">Browse Programs</a>
+      <a href="/admissions/" class="btn btn-navy">Explore Admissions</a>
+    </div>
+  </div>
+</section>
