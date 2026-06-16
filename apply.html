@@ -81,33 +81,13 @@ permalink: /apply/
                 <label for="program1">First preference (program)<span class="req-star">*</span></label>
                 <select id="program1" name="program1"><option value="">Select a program…</option></select>
               </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="program2">Second preference <span style="color:var(--gray-600);font-weight:400">(optional)</span></label>
-                  <select id="program2" name="program2"><option value="">No second preference</option></select>
-                </div>
-                <div class="form-group">
-                  <label for="program3">Third preference <span style="color:var(--gray-600);font-weight:400">(optional)</span></label>
-                  <select id="program3" name="program3"><option value="">No third preference</option></select>
-                </div>
+              <div class="form-group full">
+                <label for="program2">Second preference <span style="color:var(--gray-600);font-weight:400">(optional)</span></label>
+                <select id="program2" name="program2"><option value="">No second preference</option></select>
               </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <span class="form-label">Study mode<span class="req-star">*</span></span>
-                  <div class="choice-group">
-                    <label class="choice"><input type="radio" name="studyMode" value="Full-time" data-label="Full-time"><span class="choice-text"><strong>Full-time</strong></span></label>
-                    <label class="choice"><input type="radio" name="studyMode" value="Part-time" data-label="Part-time"><span class="choice-text"><strong>Part-time</strong></span></label>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="campus">Campus / attendance<span class="req-star">*</span></label>
-                  <select id="campus" name="campus">
-                    <option value="">Select…</option>
-                    <option value="Sydney CBD Campus">Sydney CBD Campus (on-campus)</option>
-                    <option value="Online">Online / distance</option>
-                  </select>
-                </div>
+              <div class="form-group full">
+                <label for="program3">Third preference <span style="color:var(--gray-600);font-weight:400">(optional)</span></label>
+                <select id="program3" name="program3"><option value="">No third preference</option></select>
               </div>
 
               <div class="apply-actions">
@@ -716,8 +696,6 @@ permalink: /apply/
         and(reqText('studyLevel'));
         and(reqText('intake'));
         and(reqText('program1', 'Please select your first preference.'));
-        and(reqRadio('studyMode'));
-        and(reqText('campus'));
         // No duplicate preferences
         var p1 = $('program1').value, p2 = $('program2').value, p3 = $('program3').value;
         if (p2 && (p2 === p1)) and(fail($('program2'), 'Second preference must differ from the first.'));
@@ -990,8 +968,6 @@ permalink: /apply/
         ['Applying as', isInternational() ? 'International student' : (radioVal('applicantType') ? 'Domestic student' : '')],
         ['Study level', selText('studyLevel')],
         ['Intake', selText('intake')],
-        ['Study mode', radioVal('studyMode')],
-        ['Campus', selText('campus')],
         ['1st preference', selText('program1'), true],
         ['2nd preference', selText('program2'), true],
         ['3rd preference', selText('program3'), true]
@@ -1047,7 +1023,7 @@ permalink: /apply/
         else if (el.name || el.id) data[el.id || el.name] = el.value;
       });
       // radios store by name -> value
-      ['applicantType', 'studyMode', 'stillStudying', 'englishFirstLang'].forEach(function (n) {
+      ['applicantType', 'stillStudying', 'englishFirstLang'].forEach(function (n) {
         data['radio_' + n] = radioVal(n);
       });
       data.__files = {};
@@ -1076,7 +1052,7 @@ permalink: /apply/
         if (el.type === 'checkbox') el.checked = !!data[k];
         else if (el.type !== 'radio' && el.type !== 'file') el.value = data[k];
       });
-      ['applicantType', 'studyMode', 'stillStudying', 'englishFirstLang'].forEach(function (n) {
+      ['applicantType', 'stillStudying', 'englishFirstLang'].forEach(function (n) {
         var v = data['radio_' + n];
         if (v) {
           var r = form.querySelector('input[name="' + n + '"][value="' + v + '"]');
