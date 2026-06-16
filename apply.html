@@ -1,0 +1,1175 @@
+---
+layout: default
+title: "Apply Online — StudentFlow University"
+nav: admissions
+permalink: /apply/
+---
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      <a href="/admissions/">Admissions</a>
+      <span>/</span>
+      <span>Apply Online</span>
+    </div>
+    <h1>Online Application</h1>
+    <p>Complete your application in 6 short steps. Your progress is saved automatically — you can leave and resume any time on this device.</p>
+  </section>
+
+  <!-- ===== APPLICATION ===== -->
+  <section class="apply-section">
+    <div class="container">
+      <div class="apply-layout">
+
+        <!-- ============ MAIN ============ -->
+        <div class="apply-main">
+
+          <!-- Stepper -->
+          <div class="apply-stepper" id="stepper" aria-hidden="true">
+            <div class="stepper-item" data-step="0"><div class="stepper-dot">1</div><div class="stepper-label">Course</div></div>
+            <div class="stepper-item" data-step="1"><div class="stepper-dot">2</div><div class="stepper-label">Personal</div></div>
+            <div class="stepper-item" data-step="2"><div class="stepper-dot">3</div><div class="stepper-label">Contact</div></div>
+            <div class="stepper-item" data-step="3"><div class="stepper-dot">4</div><div class="stepper-label">Academic</div></div>
+            <div class="stepper-item" data-step="4"><div class="stepper-dot">5</div><div class="stepper-label">Documents</div></div>
+            <div class="stepper-item" data-step="5"><div class="stepper-dot">6</div><div class="stepper-label">Review</div></div>
+          </div>
+
+          <!-- Form card -->
+          <form id="applyForm" class="apply-card" novalidate>
+
+            <!-- ===== STEP 1 — COURSE ===== -->
+            <div class="form-step is-active" data-step="0">
+              <div class="step-head">
+                <span class="step-kicker">Step 1 of 6</span>
+                <h2>Course &amp; Study Preferences</h2>
+                <p>Tell us what you'd like to study and how. You can nominate up to three preferences in priority order.</p>
+              </div>
+
+              <div class="form-group full">
+                <span class="form-label">I am applying as a<span class="req-star">*</span></span>
+                <div class="choice-group" id="applicantTypeGroup">
+                  <label class="choice"><input type="radio" name="applicantType" value="domestic" data-label="Domestic student"><span class="choice-text"><strong>Domestic student</strong><span>Australian citizen / PR / NZ citizen</span></span></label>
+                  <label class="choice"><input type="radio" name="applicantType" value="international" data-label="International student"><span class="choice-text"><strong>International student</strong><span>Studying on a student visa</span></span></label>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="studyLevel">Study level<span class="req-star">*</span></label>
+                  <select id="studyLevel" name="studyLevel">
+                    <option value="">Select a level…</option>
+                    <option value="Undergraduate">Undergraduate degree</option>
+                    <option value="Postgraduate">Postgraduate coursework</option>
+                    <option value="Research">Higher degree by research (MRes / PhD)</option>
+                    <option value="Non-award">Non-award / single subjects</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="intake">Preferred intake<span class="req-star">*</span></label>
+                  <select id="intake" name="intake">
+                    <option value="">Select an intake…</option>
+                    <option value="Semester 1, 2026">Semester 1, 2026 (Feb)</option>
+                    <option value="Semester 2, 2026">Semester 2, 2026 (Jul)</option>
+                    <option value="Semester 1, 2027">Semester 1, 2027 (Feb)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group full">
+                <label for="program1">First preference (program)<span class="req-star">*</span></label>
+                <select id="program1" name="program1"><option value="">Select a program…</option></select>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="program2">Second preference <span style="color:var(--gray-600);font-weight:400">(optional)</span></label>
+                  <select id="program2" name="program2"><option value="">No second preference</option></select>
+                </div>
+                <div class="form-group">
+                  <label for="program3">Third preference <span style="color:var(--gray-600);font-weight:400">(optional)</span></label>
+                  <select id="program3" name="program3"><option value="">No third preference</option></select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <span class="form-label">Study mode<span class="req-star">*</span></span>
+                  <div class="choice-group">
+                    <label class="choice"><input type="radio" name="studyMode" value="Full-time" data-label="Full-time"><span class="choice-text"><strong>Full-time</strong></span></label>
+                    <label class="choice"><input type="radio" name="studyMode" value="Part-time" data-label="Part-time"><span class="choice-text"><strong>Part-time</strong></span></label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="campus">Campus / attendance<span class="req-star">*</span></label>
+                  <select id="campus" name="campus">
+                    <option value="">Select…</option>
+                    <option value="Sydney CBD Campus">Sydney CBD Campus (on-campus)</option>
+                    <option value="Online">Online / distance</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="apply-actions">
+                <span></span>
+                <button type="button" class="btn btn-primary" data-next>Continue →</button>
+              </div>
+            </div>
+
+            <!-- ===== STEP 2 — PERSONAL ===== -->
+            <div class="form-step" data-step="1">
+              <div class="step-head">
+                <span class="step-kicker">Step 2 of 6</span>
+                <h2>Personal Details</h2>
+                <p>Enter your name exactly as it appears on your official identity documents.</p>
+              </div>
+
+              <div class="form-row-3">
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <select id="title" name="title">
+                    <option value="">—</option>
+                    <option>Mr</option><option>Ms</option><option>Mrs</option><option>Mx</option><option>Dr</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="firstName">Given name(s)<span class="req-star">*</span></label>
+                  <input type="text" id="firstName" name="firstName" autocomplete="given-name">
+                </div>
+                <div class="form-group">
+                  <label for="familyName">Family name<span class="req-star">*</span></label>
+                  <input type="text" id="familyName" name="familyName" autocomplete="family-name">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="preferredName">Preferred name <span style="color:var(--gray-600);font-weight:400">(optional)</span></label>
+                  <input type="text" id="preferredName" name="preferredName">
+                </div>
+                <div class="form-group">
+                  <label for="dob">Date of birth<span class="req-star">*</span></label>
+                  <input type="date" id="dob" name="dob" max="2012-12-31">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="gender">Gender<span class="req-star">*</span></label>
+                  <select id="gender" name="gender">
+                    <option value="">Select…</option>
+                    <option>Female</option><option>Male</option><option>Non-binary</option><option>Prefer not to say</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="citizenship">Country of citizenship<span class="req-star">*</span></label>
+                  <input type="text" id="citizenship" name="citizenship" autocomplete="country-name" placeholder="e.g. Australia">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="countryOfBirth">Country of birth<span class="req-star">*</span></label>
+                  <input type="text" id="countryOfBirth" name="countryOfBirth">
+                </div>
+                <div class="form-group">
+                  <label for="atsi">Aboriginal or Torres Strait Islander status</label>
+                  <select id="atsi" name="atsi">
+                    <option value="">Prefer not to say</option>
+                    <option>No</option>
+                    <option>Yes — Aboriginal</option>
+                    <option>Yes — Torres Strait Islander</option>
+                    <option>Yes — Both</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- International-only -->
+              <div class="intl-only" hidden>
+                <h3 class="field-section-title">International applicant details</h3>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="passportNumber">Passport number<span class="req-star">*</span></label>
+                    <input type="text" id="passportNumber" name="passportNumber">
+                  </div>
+                  <div class="form-group">
+                    <label for="visaStatus">Current Australian visa status<span class="req-star">*</span></label>
+                    <select id="visaStatus" name="visaStatus">
+                      <option value="">Select…</option>
+                      <option>No current visa — will apply for a student visa (subclass 500)</option>
+                      <option>Already hold a student visa (subclass 500)</option>
+                      <option>Hold another visa (please specify in notes)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="apply-actions">
+                <button type="button" class="btn btn-ghost" data-back>← Back</button>
+                <button type="button" class="btn btn-primary" data-next>Continue →</button>
+              </div>
+            </div>
+
+            <!-- ===== STEP 3 — CONTACT ===== -->
+            <div class="form-step" data-step="2">
+              <div class="step-head">
+                <span class="step-kicker">Step 3 of 6</span>
+                <h2>Contact Details</h2>
+                <p>We'll send all updates about your application to the email address below.</p>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email address<span class="req-star">*</span></label>
+                  <input type="email" id="email" name="email" autocomplete="email">
+                </div>
+                <div class="form-group">
+                  <label for="confirmEmail">Confirm email<span class="req-star">*</span></label>
+                  <input type="email" id="confirmEmail" name="confirmEmail">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="mobile">Mobile phone<span class="req-star">*</span></label>
+                  <input type="tel" id="mobile" name="mobile" placeholder="e.g. +61 412 345 678" autocomplete="tel">
+                </div>
+                <div class="form-group">
+                  <label for="altPhone">Alternative phone <span style="color:var(--gray-600);font-weight:400">(optional)</span></label>
+                  <input type="tel" id="altPhone" name="altPhone">
+                </div>
+              </div>
+
+              <h3 class="field-section-title">Residential address</h3>
+              <div class="form-group full">
+                <label for="addressLine1">Address line 1<span class="req-star">*</span></label>
+                <input type="text" id="addressLine1" name="addressLine1" autocomplete="address-line1">
+              </div>
+              <div class="form-group full">
+                <label for="addressLine2">Address line 2 <span style="color:var(--gray-600);font-weight:400">(optional)</span></label>
+                <input type="text" id="addressLine2" name="addressLine2" autocomplete="address-line2">
+              </div>
+              <div class="form-row-3">
+                <div class="form-group">
+                  <label for="suburb">Suburb / city<span class="req-star">*</span></label>
+                  <input type="text" id="suburb" name="suburb" autocomplete="address-level2">
+                </div>
+                <div class="form-group">
+                  <label for="state">State / region<span class="req-star">*</span></label>
+                  <input type="text" id="state" name="state" autocomplete="address-level1" placeholder="e.g. NSW">
+                </div>
+                <div class="form-group">
+                  <label for="postcode">Postcode<span class="req-star">*</span></label>
+                  <input type="text" id="postcode" name="postcode" autocomplete="postal-code">
+                </div>
+              </div>
+              <div class="form-group full">
+                <label for="country">Country<span class="req-star">*</span></label>
+                <input type="text" id="country" name="country" autocomplete="country-name" placeholder="e.g. Australia">
+              </div>
+
+              <h3 class="field-section-title">Emergency contact</h3>
+              <div class="form-row-3">
+                <div class="form-group">
+                  <label for="emergencyName">Full name<span class="req-star">*</span></label>
+                  <input type="text" id="emergencyName" name="emergencyName">
+                </div>
+                <div class="form-group">
+                  <label for="emergencyRelationship">Relationship<span class="req-star">*</span></label>
+                  <input type="text" id="emergencyRelationship" name="emergencyRelationship" placeholder="e.g. Parent">
+                </div>
+                <div class="form-group">
+                  <label for="emergencyPhone">Phone<span class="req-star">*</span></label>
+                  <input type="tel" id="emergencyPhone" name="emergencyPhone">
+                </div>
+              </div>
+
+              <div class="apply-actions">
+                <button type="button" class="btn btn-ghost" data-back>← Back</button>
+                <button type="button" class="btn btn-primary" data-next>Continue →</button>
+              </div>
+            </div>
+
+            <!-- ===== STEP 4 — ACADEMIC ===== -->
+            <div class="form-step" data-step="3">
+              <div class="step-head">
+                <span class="step-kicker">Step 4 of 6</span>
+                <h2>Academic History &amp; English</h2>
+                <p>Provide details of your highest completed (or in-progress) qualification and your English proficiency.</p>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="highestQual">Highest qualification<span class="req-star">*</span></label>
+                  <select id="highestQual" name="highestQual">
+                    <option value="">Select…</option>
+                    <option>Year 12 / Senior secondary</option>
+                    <option>Certificate / Diploma (VET / TAFE)</option>
+                    <option>Bachelor's degree</option>
+                    <option>Honours degree</option>
+                    <option>Master's degree</option>
+                    <option>Doctoral degree</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="institution">Institution name<span class="req-star">*</span></label>
+                  <input type="text" id="institution" name="institution">
+                </div>
+              </div>
+
+              <div class="form-row-3">
+                <div class="form-group">
+                  <label for="countryOfStudy">Country of study<span class="req-star">*</span></label>
+                  <input type="text" id="countryOfStudy" name="countryOfStudy">
+                </div>
+                <div class="form-group">
+                  <label for="yearCompleted">Year completed<span class="req-star">*</span></label>
+                  <input type="number" id="yearCompleted" name="yearCompleted" min="1970" max="2030" placeholder="e.g. 2025">
+                </div>
+                <div class="form-group">
+                  <span class="form-label">Currently studying?<span class="req-star">*</span></span>
+                  <div class="choice-group">
+                    <label class="choice" style="min-width:auto"><input type="radio" name="stillStudying" value="Yes" data-label="Yes"><span class="choice-text"><strong>Yes</strong></span></label>
+                    <label class="choice" style="min-width:auto"><input type="radio" name="stillStudying" value="No" data-label="No"><span class="choice-text"><strong>No</strong></span></label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="resultType">Result type<span class="req-star">*</span></label>
+                  <select id="resultType" name="resultType">
+                    <option value="">Select…</option>
+                    <option>ATAR</option>
+                    <option>GPA (out of 7)</option>
+                    <option>GPA (out of 4)</option>
+                    <option>Percentage</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="resultValue">Result / score<span class="req-star">*</span></label>
+                  <input type="text" id="resultValue" name="resultValue" placeholder="e.g. 88.50">
+                </div>
+              </div>
+
+              <h3 class="field-section-title">English proficiency</h3>
+              <div class="form-group full">
+                <span class="form-label">Is English your first language?<span class="req-star">*</span></span>
+                <div class="choice-group">
+                  <label class="choice"><input type="radio" name="englishFirstLang" value="Yes" data-label="Yes"><span class="choice-text"><strong>Yes</strong><span>No test required</span></span></label>
+                  <label class="choice"><input type="radio" name="englishFirstLang" value="No" data-label="No"><span class="choice-text"><strong>No</strong><span>Test results required</span></span></label>
+                </div>
+              </div>
+
+              <div id="englishTestBlock" hidden>
+                <div class="form-row-3">
+                  <div class="form-group">
+                    <label for="englishTest">Test taken<span class="req-star">*</span></label>
+                    <select id="englishTest" name="englishTest">
+                      <option value="">Select…</option>
+                      <option>IELTS Academic</option>
+                      <option>TOEFL iBT</option>
+                      <option>PTE Academic</option>
+                      <option>Cambridge C1/C2</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="englishScore">Overall score<span class="req-star">*</span></label>
+                    <input type="text" id="englishScore" name="englishScore" placeholder="e.g. 7.0">
+                  </div>
+                  <div class="form-group">
+                    <label for="englishTestDate">Test date<span class="req-star">*</span></label>
+                    <input type="date" id="englishTestDate" name="englishTestDate">
+                  </div>
+                </div>
+                <p class="form-hint">Most undergraduate programs require IELTS 6.5+ overall (no band below 6.0). Check your program page for exact requirements.</p>
+              </div>
+
+              <div class="apply-actions">
+                <button type="button" class="btn btn-ghost" data-back>← Back</button>
+                <button type="button" class="btn btn-primary" data-next>Continue →</button>
+              </div>
+            </div>
+
+            <!-- ===== STEP 5 — DOCUMENTS ===== -->
+            <div class="form-step" data-step="4">
+              <div class="step-head">
+                <span class="step-kicker">Step 5 of 6</span>
+                <h2>Supporting Documents</h2>
+                <p>Upload clear scans or photos. Accepted formats: PDF, JPG, PNG — maximum 10&nbsp;MB per file.</p>
+              </div>
+
+              <div id="docList">
+                <!-- Academic transcript -->
+                <div class="doc-card" data-doc="transcript">
+                  <div class="doc-title">Academic transcript<span class="doc-badge required">Required</span></div>
+                  <div class="doc-desc">Official transcript / academic record for your highest qualification.</div>
+                  <label class="file-field">
+                    <input type="file" id="doc_transcript" accept=".pdf,.jpg,.jpeg,.png">
+                    <div class="file-icon">📄</div>
+                    <div class="file-cta"><span>Choose a file</span> or drag it here</div>
+                    <div class="file-meta">PDF, JPG or PNG · up to 10 MB</div>
+                  </label>
+                  <div class="file-list" data-list="doc_transcript"></div>
+                </div>
+
+                <!-- ID document -->
+                <div class="doc-card" data-doc="id">
+                  <div class="doc-title">Proof of identity<span class="doc-badge required">Required</span></div>
+                  <div class="doc-desc" data-id-desc>Passport, birth certificate, or government-issued photo ID.</div>
+                  <label class="file-field">
+                    <input type="file" id="doc_id" accept=".pdf,.jpg,.jpeg,.png">
+                    <div class="file-icon">🪪</div>
+                    <div class="file-cta"><span>Choose a file</span> or drag it here</div>
+                    <div class="file-meta">PDF, JPG or PNG · up to 10 MB</div>
+                  </label>
+                  <div class="file-list" data-list="doc_id"></div>
+                </div>
+
+                <!-- English results -->
+                <div class="doc-card hidden" data-doc="english">
+                  <div class="doc-title">English test results<span class="doc-badge required">Required</span></div>
+                  <div class="doc-desc">IELTS / TOEFL / PTE results report matching the scores you entered.</div>
+                  <label class="file-field">
+                    <input type="file" id="doc_english" accept=".pdf,.jpg,.jpeg,.png">
+                    <div class="file-icon">🗣️</div>
+                    <div class="file-cta"><span>Choose a file</span> or drag it here</div>
+                    <div class="file-meta">PDF, JPG or PNG · up to 10 MB</div>
+                  </label>
+                  <div class="file-list" data-list="doc_english"></div>
+                </div>
+
+                <!-- CV / résumé -->
+                <div class="doc-card hidden" data-doc="cv">
+                  <div class="doc-title">CV / résumé<span class="doc-badge required">Required</span></div>
+                  <div class="doc-desc">A current CV outlining your education and any relevant work experience.</div>
+                  <label class="file-field">
+                    <input type="file" id="doc_cv" accept=".pdf,.jpg,.jpeg,.png">
+                    <div class="file-icon">📑</div>
+                    <div class="file-cta"><span>Choose a file</span> or drag it here</div>
+                    <div class="file-meta">PDF, JPG or PNG · up to 10 MB</div>
+                  </label>
+                  <div class="file-list" data-list="doc_cv"></div>
+                </div>
+
+                <!-- Statement / research proposal -->
+                <div class="doc-card" data-doc="statement">
+                  <div class="doc-title">Personal statement / research proposal<span class="doc-badge optional" data-statement-badge>Optional</span></div>
+                  <div class="doc-desc">A statement of purpose (required for research degrees and selective programs).</div>
+                  <label class="file-field">
+                    <input type="file" id="doc_statement" accept=".pdf,.jpg,.jpeg,.png">
+                    <div class="file-icon">✍️</div>
+                    <div class="file-cta"><span>Choose a file</span> or drag it here</div>
+                    <div class="file-meta">PDF, JPG or PNG · up to 10 MB</div>
+                  </label>
+                  <div class="file-list" data-list="doc_statement"></div>
+                </div>
+
+                <!-- Other -->
+                <div class="doc-card" data-doc="other">
+                  <div class="doc-title">Other supporting documents<span class="doc-badge optional">Optional</span></div>
+                  <div class="doc-desc">Portfolios, references, certificates, change-of-name documents, etc. You may add multiple files.</div>
+                  <label class="file-field">
+                    <input type="file" id="doc_other" accept=".pdf,.jpg,.jpeg,.png" multiple>
+                    <div class="file-icon">📎</div>
+                    <div class="file-cta"><span>Choose files</span> or drag them here</div>
+                    <div class="file-meta">PDF, JPG or PNG · up to 10 MB each</div>
+                  </label>
+                  <div class="file-list" data-list="doc_other"></div>
+                </div>
+              </div>
+
+              <div class="apply-actions">
+                <button type="button" class="btn btn-ghost" data-back>← Back</button>
+                <button type="button" class="btn btn-primary" data-next>Review application →</button>
+              </div>
+            </div>
+
+            <!-- ===== STEP 6 — REVIEW ===== -->
+            <div class="form-step" data-step="5">
+              <div class="step-head">
+                <span class="step-kicker">Step 6 of 6</span>
+                <h2>Review &amp; Submit</h2>
+                <p>Please check your details carefully. Use the <em>Edit</em> links to make changes before submitting.</p>
+              </div>
+
+              <div id="reviewContent"></div>
+
+              <div class="fee-note">
+                <div class="fee-icon">💳</div>
+                <div>
+                  <h4>Application fee — A$75</h4>
+                  <p>A single A$75 fee covers all program preferences in this application. After you submit, a secure payment link will be emailed to you. Your application is assessed once payment is received. Fee waivers apply to selected equity and scholarship pathways.</p>
+                </div>
+              </div>
+
+              <h3 class="field-section-title">Declarations</h3>
+              <div class="declaration">
+                <input type="checkbox" id="declTrue" name="declTrue">
+                <label for="declTrue">I declare that the information provided in this application is true, complete and correct to the best of my knowledge.</label>
+              </div>
+              <div class="declaration">
+                <input type="checkbox" id="declVerify" name="declVerify">
+                <label for="declVerify">I authorise StudentFlow University to verify my academic records and supporting documents with the issuing institutions and relevant authorities.</label>
+              </div>
+              <div class="declaration">
+                <input type="checkbox" id="declPrivacy" name="declPrivacy">
+                <label for="declPrivacy">I have read and accept the <a href="/policies/" target="_blank" rel="noopener">Privacy Policy and Collection Notice</a>, and consent to my personal information being used to assess and manage my application.</label>
+              </div>
+              <div class="declaration intl-only" hidden>
+                <input type="checkbox" id="declIntl" name="declIntl">
+                <label for="declIntl">I understand that, as an international student, an offer is conditional on obtaining a valid student visa (subclass 500) and maintaining Overseas Student Health Cover (OSHC) for the duration of my study.</label>
+              </div>
+
+              <div class="apply-actions">
+                <button type="button" class="btn btn-ghost" data-back>← Back</button>
+                <button type="submit" class="btn btn-primary" id="submitBtn">Submit application</button>
+              </div>
+            </div>
+
+          </form>
+
+          <!-- ===== CONFIRMATION ===== -->
+          <div class="apply-confirm" id="confirmPanel" hidden>
+            <div class="confirm-check">✓</div>
+            <h2>Application submitted!</h2>
+            <p id="confirmIntro">Thank you, <strong id="confirmName">applicant</strong>. Your application has been received and a confirmation has been sent to <strong id="confirmEmailOut">your email</strong>.</p>
+            <div class="ref-box">
+              <div class="ref-label">Your application reference</div>
+              <div class="ref-num" id="refNum">SFU-0000-000000</div>
+            </div>
+            <div class="next-steps">
+              <h3>What happens next</h3>
+              <ol>
+                <li><strong>Pay the A$75 application fee</strong> via the secure link in your confirmation email. Assessment begins once payment is received.</li>
+                <li><strong>We verify your documents.</strong> Our admissions team reviews your academic records and supporting documents — we'll contact you if anything further is needed.</li>
+                <li><strong>Receive a decision.</strong> Most domestic applicants hear back within 10 business days; international applications take 2–4 weeks.</li>
+                <li><strong>Accept your offer</strong> through the applicant portal to secure your place and begin enrolment.</li>
+              </ol>
+            </div>
+            <div class="confirm-actions">
+              <button type="button" class="btn btn-navy" onclick="window.print()">🖨️ Print / save confirmation</button>
+              <a href="/" class="btn btn-primary">Back to home</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ============ ASIDE ============ -->
+        <aside class="apply-aside" id="applyAside">
+          <div class="aside-card">
+            <h4>Your progress</h4>
+            <ul class="progress-list" id="progressList">
+              <li data-p="0"><span class="pdot">✓</span> Course &amp; preferences</li>
+              <li data-p="1"><span class="pdot">✓</span> Personal details</li>
+              <li data-p="2"><span class="pdot">✓</span> Contact details</li>
+              <li data-p="3"><span class="pdot">✓</span> Academic &amp; English</li>
+              <li data-p="4"><span class="pdot">✓</span> Documents</li>
+              <li data-p="5"><span class="pdot">✓</span> Review &amp; submit</li>
+            </ul>
+          </div>
+          <div class="aside-card" id="draftCard">
+            <h4>Saved automatically</h4>
+            <p class="draft-note" id="draftNote">Your answers are saved to this browser as you go. You can close the page and resume later on the same device.</p>
+            <button type="button" class="btn-clear-draft" id="clearDraftBtn">Clear saved draft</button>
+          </div>
+          <div class="aside-card aside-help">
+            <h4>Need help?</h4>
+            <p>Admissions hotline<br><a href="tel:+61290005678">+61 2 9000 5678</a></p>
+            <p>Email<br><a href="mailto:admissions@sfu.edu.au">admissions@sfu.edu.au</a></p>
+            <p style="margin-top:10px"><a href="/admissions/">View entry requirements →</a></p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+  (function () {
+    'use strict';
+
+    // ---- Program catalogue (mirrors /programs/) ----
+    var PROGRAMS = [
+      ['Business & Commerce', [
+        'Bachelor of Business Administration (BBA-001)',
+        'Bachelor of Commerce — Accounting (BCom-002)',
+        'Bachelor of Commerce — Finance (BCom-003)',
+        'Master of Business Administration (MBA-101)',
+        'Master of Marketing (MMkt-102)'
+      ]],
+      ['Engineering & Technology', [
+        'Bachelor of Software Engineering (Hons) (BSE-001)',
+        'Bachelor of Computer Science (BCS-002)',
+        'Bachelor of Civil Engineering (Hons) (BCE-003)',
+        'Master of Artificial Intelligence (MAI-101)',
+        'Master of Data Science (MDS-102)'
+      ]],
+      ['Health Sciences', [
+        'Bachelor of Nursing (BN-001)',
+        'Bachelor of Physiotherapy (Hons) (BPhys-002)',
+        'Master of Public Health (MPH-101)',
+        'Doctor of Medicine (MD-201)'
+      ]],
+      ['Arts & Design', [
+        'Bachelor of Arts — Journalism (BA-J-001)',
+        'Bachelor of Visual Communication Design (BVCD-002)',
+        'Master of Communication & Media (MCM-101)'
+      ]],
+      ['Law & Justice', [
+        'Bachelor of Laws (LLB-001)',
+        'Juris Doctor (JD-201)',
+        'Master of Laws (LLM-101)'
+      ]]
+    ];
+
+    var DRAFT_KEY = 'sfu_application_draft_v1';
+    var MAX_BYTES = 10 * 1024 * 1024; // 10 MB
+    var ALLOWED = ['pdf', 'jpg', 'jpeg', 'png'];
+    var TOTAL_STEPS = 6;
+
+    var $ = function (id) { return document.getElementById(id); };
+    var form = $('applyForm');
+    if (!form) return;
+
+    var steps = Array.prototype.slice.call(form.querySelectorAll('.form-step'));
+    var stepperItems = Array.prototype.slice.call(document.querySelectorAll('#stepper .stepper-item'));
+    var progressItems = Array.prototype.slice.call(document.querySelectorAll('#progressList li'));
+    var current = 0;
+    // Track files only for display/draft (names); File objects kept in memory only.
+    var fileStore = {}; // id -> [{name, size}]
+
+    // ---------- Populate program selects ----------
+    function fillPrograms(sel, placeholder) {
+      sel.innerHTML = '';
+      var opt0 = document.createElement('option');
+      opt0.value = ''; opt0.textContent = placeholder;
+      sel.appendChild(opt0);
+      PROGRAMS.forEach(function (fac) {
+        var g = document.createElement('optgroup');
+        g.label = 'Faculty of ' + fac[0];
+        fac[1].forEach(function (p) {
+          var o = document.createElement('option');
+          o.value = p; o.textContent = p;
+          g.appendChild(o);
+        });
+        sel.appendChild(g);
+      });
+    }
+    fillPrograms($('program1'), 'Select a program…');
+    fillPrograms($('program2'), 'No second preference');
+    fillPrograms($('program3'), 'No third preference');
+
+    // ---------- Error helpers ----------
+    function clearErrors(scope) {
+      (scope || document).querySelectorAll('.has-error').forEach(function (g) {
+        g.classList.remove('has-error');
+      });
+      (scope || document).querySelectorAll('.field-error').forEach(function (e) { e.remove(); });
+      (scope || document).querySelectorAll('.invalid').forEach(function (i) { i.classList.remove('invalid'); });
+    }
+    function showError(el, msg) {
+      var group = el.closest('.form-group') || el.closest('.declaration');
+      if (!group) return;
+      group.classList.add('has-error');
+      if (el.classList) el.classList.add('invalid');
+      var e = group.querySelector('.field-error');
+      if (!e) { e = document.createElement('div'); e.className = 'field-error'; group.appendChild(e); }
+      e.textContent = msg;
+    }
+    var firstBad = null;
+    function fail(el, msg) { showError(el, msg); if (!firstBad) firstBad = el; return false; }
+
+    function reqText(id, msg) {
+      var el = $(id); if (!el) return true;
+      if (!el.value.trim()) return fail(el, msg || 'This field is required.');
+      return true;
+    }
+    function reqRadio(name, msg) {
+      var els = document.getElementsByName(name);
+      var ok = Array.prototype.some.call(els, function (e) { return e.checked; });
+      if (!ok) return fail(els[0], msg || 'Please choose an option.');
+      return true;
+    }
+    function reqCheck(id, msg) {
+      var el = $(id);
+      if (!el.checked) return fail(el, msg || 'Please tick this box to continue.');
+      return true;
+    }
+    function radioVal(name) {
+      var el = Array.prototype.find.call(document.getElementsByName(name), function (e) { return e.checked; });
+      return el ? el.value : '';
+    }
+
+    // ---------- Per-step validation ----------
+    function validateStep(i) {
+      firstBad = null;
+      clearErrors(steps[i]);
+      var ok = true;
+      var and = function (r) { ok = r && ok; };
+
+      if (i === 0) {
+        and(reqRadio('applicantType', 'Please tell us how you are applying.'));
+        and(reqText('studyLevel'));
+        and(reqText('intake'));
+        and(reqText('program1', 'Please select your first preference.'));
+        and(reqRadio('studyMode'));
+        and(reqText('campus'));
+        // No duplicate preferences
+        var p1 = $('program1').value, p2 = $('program2').value, p3 = $('program3').value;
+        if (p2 && (p2 === p1)) and(fail($('program2'), 'Second preference must differ from the first.'));
+        if (p3 && (p3 === p1 || p3 === p2)) and(fail($('program3'), 'Third preference must be different.'));
+      }
+
+      else if (i === 1) {
+        and(reqText('firstName'));
+        and(reqText('familyName'));
+        and(reqText('citizenship'));
+        and(reqText('countryOfBirth'));
+        and(reqText('gender'));
+        if (reqText('dob', 'Please enter your date of birth.')) {
+          var d = new Date($('dob').value);
+          var now = new Date();
+          var age = (now - d) / (365.25 * 24 * 3600 * 1000);
+          if (isNaN(d.getTime())) and(fail($('dob'), 'Please enter a valid date.'));
+          else if (age < 15) and(fail($('dob'), 'Applicants must be at least 15 years old.'));
+          else if (age > 100) and(fail($('dob'), 'Please check the date of birth.'));
+        } else { ok = false; }
+        if (isInternational()) {
+          and(reqText('passportNumber'));
+          and(reqText('visaStatus'));
+        }
+      }
+
+      else if (i === 2) {
+        var emailEl = $('email');
+        if (reqText('email', 'Please enter your email address.')) {
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim())) and(fail(emailEl, 'Please enter a valid email address.'));
+        } else { ok = false; }
+        if (reqText('confirmEmail', 'Please confirm your email.')) {
+          if ($('confirmEmail').value.trim().toLowerCase() !== emailEl.value.trim().toLowerCase()) and(fail($('confirmEmail'), 'Email addresses do not match.'));
+        } else { ok = false; }
+        if (reqText('mobile', 'Please enter a mobile number.')) {
+          if (!isValidPhone($('mobile').value)) and(fail($('mobile'), 'Please enter a valid phone number.'));
+        } else { ok = false; }
+        and(reqText('addressLine1'));
+        and(reqText('suburb'));
+        and(reqText('state'));
+        if (reqText('postcode')) {
+          var pc = $('postcode').value.trim();
+          if (/austral/i.test($('country').value) && !/^\d{4}$/.test(pc)) and(fail($('postcode'), 'Australian postcodes are 4 digits.'));
+        } else { ok = false; }
+        and(reqText('country'));
+        and(reqText('emergencyName'));
+        and(reqText('emergencyRelationship'));
+        if (reqText('emergencyPhone')) {
+          if (!isValidPhone($('emergencyPhone').value)) and(fail($('emergencyPhone'), 'Please enter a valid phone number.'));
+        } else { ok = false; }
+      }
+
+      else if (i === 3) {
+        and(reqText('highestQual'));
+        and(reqText('institution'));
+        and(reqText('countryOfStudy'));
+        if (reqText('yearCompleted', 'Please enter the year.')) {
+          var y = parseInt($('yearCompleted').value, 10);
+          if (y < 1970 || y > 2030) and(fail($('yearCompleted'), 'Please enter a year between 1970 and 2030.'));
+        } else { ok = false; }
+        and(reqRadio('stillStudying'));
+        and(reqText('resultType'));
+        and(reqText('resultValue'));
+        and(reqRadio('englishFirstLang', 'Please tell us about your English background.'));
+        if (needsEnglishTest()) {
+          and(reqText('englishTest'));
+          and(reqText('englishScore'));
+          and(reqText('englishTestDate'));
+        }
+      }
+
+      else if (i === 4) {
+        // Required documents depend on context
+        requiredDocs().forEach(function (docId) {
+          if (!fileStore[docId] || !fileStore[docId].length) {
+            var card = document.querySelector('.doc-card[data-doc="' + docId.replace('doc_', '') + '"]');
+            var input = $(docId);
+            if (card) {
+              card.classList.add('has-error');
+              var list = card.querySelector('.field-error');
+              if (!list) { list = document.createElement('div'); list.className = 'field-error'; card.appendChild(list); }
+              list.textContent = 'This document is required.';
+              if (!firstBad) firstBad = card;
+            }
+            ok = false;
+          }
+        });
+      }
+
+      else if (i === 5) {
+        and(reqCheck('declTrue'));
+        and(reqCheck('declVerify'));
+        and(reqCheck('declPrivacy'));
+        if (isInternational()) and(reqCheck('declIntl'));
+      }
+
+      if (!ok && firstBad && firstBad.scrollIntoView) {
+        firstBad.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (firstBad.focus) { try { firstBad.focus({ preventScroll: true }); } catch (e) {} }
+      }
+      return ok;
+    }
+
+    function isValidPhone(v) {
+      var digits = (v || '').replace(/[\s\-().]/g, '');
+      return /^\+?\d{7,15}$/.test(digits);
+    }
+    function isInternational() { return radioVal('applicantType') === 'international'; }
+    function needsEnglishTest() { return radioVal('englishFirstLang') === 'No'; }
+    function isPostgrad() {
+      var lvl = $('studyLevel').value;
+      return lvl === 'Postgraduate' || lvl === 'Research';
+    }
+    function isResearch() { return $('studyLevel').value === 'Research'; }
+
+    function requiredDocs() {
+      var docs = ['doc_transcript', 'doc_id'];
+      if (needsEnglishTest()) docs.push('doc_english');
+      if (isPostgrad()) docs.push('doc_cv');
+      if (isResearch()) docs.push('doc_statement');
+      return docs;
+    }
+
+    // ---------- Conditional UI ----------
+    function refreshConditional() {
+      var intl = isInternational();
+      document.querySelectorAll('.intl-only').forEach(function (el) { el.hidden = !intl; });
+
+      $('englishTestBlock').hidden = !needsEnglishTest();
+
+      // Document visibility / required badges
+      toggleDoc('english', needsEnglishTest(), true);
+      toggleDoc('cv', isPostgrad(), true);
+      // Statement: always visible, but required for research
+      var stmtBadge = document.querySelector('[data-statement-badge]');
+      if (stmtBadge) {
+        if (isResearch()) { stmtBadge.textContent = 'Required'; stmtBadge.className = 'doc-badge required'; }
+        else { stmtBadge.textContent = 'Optional'; stmtBadge.className = 'doc-badge optional'; }
+      }
+      // ID description hint for international
+      var idDesc = document.querySelector('[data-id-desc]');
+      if (idDesc) idDesc.textContent = intl
+        ? 'A clear copy of the photo page of your current passport.'
+        : 'Passport, birth certificate, or government-issued photo ID.';
+    }
+    function toggleDoc(name, show) {
+      var card = document.querySelector('.doc-card[data-doc="' + name + '"]');
+      if (card) card.classList.toggle('hidden', !show);
+    }
+
+    // ---------- Navigation ----------
+    function goTo(i, validateForward) {
+      if (i > current && validateForward) {
+        for (var s = current; s < i; s++) { if (!validateStep(s)) return; }
+      }
+      current = Math.max(0, Math.min(TOTAL_STEPS - 1, i));
+      steps.forEach(function (st, idx) { st.classList.toggle('is-active', idx === current); });
+      stepperItems.forEach(function (it, idx) {
+        it.classList.toggle('active', idx === current);
+        it.classList.toggle('done', idx < current);
+      });
+      progressItems.forEach(function (it, idx) {
+        it.classList.toggle('active', idx === current);
+        it.classList.toggle('done', idx < current);
+      });
+      if (current === 5) buildReview();
+      window.scrollTo({ top: form.getBoundingClientRect().top + window.pageYOffset - 90, behavior: 'smooth' });
+      saveDraft();
+    }
+
+    form.querySelectorAll('[data-next]').forEach(function (b) {
+      b.addEventListener('click', function () { if (validateStep(current)) goTo(current + 1, false); });
+    });
+    form.querySelectorAll('[data-back]').forEach(function (b) {
+      b.addEventListener('click', function () { goTo(current - 1, false); });
+    });
+    stepperItems.forEach(function (it) {
+      it.addEventListener('click', function () {
+        var target = parseInt(it.getAttribute('data-step'), 10);
+        if (target < current) goTo(target, false);       // jump back freely
+        else if (target > current) goTo(target, true);    // validate forward
+      });
+    });
+
+    // ---------- Files ----------
+    function fmtSize(b) {
+      if (b < 1024) return b + ' B';
+      if (b < 1048576) return (b / 1024).toFixed(0) + ' KB';
+      return (b / 1048576).toFixed(1) + ' MB';
+    }
+    function fileError(input, msg) {
+      var card = input.closest('.doc-card');
+      card.classList.add('has-error');
+      var e = card.querySelector('.field-error');
+      if (!e) { e = document.createElement('div'); e.className = 'field-error'; card.appendChild(e); }
+      e.textContent = msg;
+    }
+    function renderFileList(id) {
+      var list = document.querySelector('[data-list="' + id + '"]');
+      list.innerHTML = '';
+      (fileStore[id] || []).forEach(function (f, idx) {
+        var row = document.createElement('div');
+        row.className = 'file-item';
+        var name = document.createElement('div');
+        name.className = 'file-name';
+        name.innerHTML = '<span class="file-ok">✓</span><span>' + escapeHtml(f.name) + '</span>';
+        var right = document.createElement('div');
+        right.style.display = 'flex'; right.style.alignItems = 'center'; right.style.gap = '10px';
+        var size = document.createElement('span'); size.className = 'file-size'; size.textContent = fmtSize(f.size);
+        var rm = document.createElement('button');
+        rm.type = 'button'; rm.className = 'file-remove'; rm.setAttribute('aria-label', 'Remove file'); rm.textContent = '✕';
+        rm.addEventListener('click', function () {
+          fileStore[id].splice(idx, 1);
+          if (!fileStore[id].length) { delete fileStore[id]; $(id).value = ''; }
+          renderFileList(id); saveDraft();
+        });
+        right.appendChild(size); right.appendChild(rm);
+        row.appendChild(name); row.appendChild(right);
+        list.appendChild(row);
+      });
+    }
+    function handleFiles(input) {
+      var card = input.closest('.doc-card');
+      card.classList.remove('has-error');
+      var ex = card.querySelector('.field-error'); if (ex) ex.remove();
+      var multiple = input.hasAttribute('multiple');
+      if (!multiple) fileStore[input.id] = [];
+      Array.prototype.forEach.call(input.files, function (f) {
+        var ext = (f.name.split('.').pop() || '').toLowerCase();
+        if (ALLOWED.indexOf(ext) === -1) { fileError(input, '"' + f.name + '" is not a PDF, JPG or PNG.'); return; }
+        if (f.size > MAX_BYTES) { fileError(input, '"' + f.name + '" exceeds the 10 MB limit (' + fmtSize(f.size) + ').'); return; }
+        fileStore[input.id] = fileStore[input.id] || [];
+        fileStore[input.id].push({ name: f.name, size: f.size });
+      });
+      renderFileList(input.id);
+      saveDraft();
+    }
+    ['doc_transcript', 'doc_id', 'doc_english', 'doc_cv', 'doc_statement', 'doc_other'].forEach(function (id) {
+      var el = $(id);
+      if (el) el.addEventListener('change', function () { handleFiles(el); });
+    });
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+    }
+
+    // ---------- Review ----------
+    function review(rows) {
+      return rows.filter(function (r) { return r[1]; }).map(function (r) {
+        return '<div class="review-item' + (r[2] ? ' full' : '') + '"><div class="rk">' + escapeHtml(r[0]) +
+          '</div><div class="rv">' + escapeHtml(r[1]) + '</div></div>';
+      }).join('');
+    }
+    function block(title, stepIndex, rows) {
+      var html = review(rows);
+      if (!html) return '';
+      return '<div class="review-block"><div class="review-block-head"><h3>' + title +
+        '</h3><button type="button" class="review-edit" data-edit="' + stepIndex + '">Edit</button></div>' +
+        '<div class="review-grid">' + html + '</div></div>';
+    }
+    function selText(id) { var e = $(id); return e && e.value ? e.value : ''; }
+    function fileNames(id) { return (fileStore[id] || []).map(function (f) { return f.name; }).join(', '); }
+
+    function buildReview() {
+      var c = $('reviewContent');
+      var html = '';
+      html += block('Course &amp; preferences', 0, [
+        ['Applying as', isInternational() ? 'International student' : (radioVal('applicantType') ? 'Domestic student' : '')],
+        ['Study level', selText('studyLevel')],
+        ['Intake', selText('intake')],
+        ['Study mode', radioVal('studyMode')],
+        ['Campus', selText('campus')],
+        ['1st preference', selText('program1'), true],
+        ['2nd preference', selText('program2'), true],
+        ['3rd preference', selText('program3'), true]
+      ]);
+      html += block('Personal details', 1, [
+        ['Name', [selText('title'), selText('firstName'), selText('familyName')].filter(Boolean).join(' ')],
+        ['Preferred name', selText('preferredName')],
+        ['Date of birth', selText('dob')],
+        ['Gender', selText('gender')],
+        ['Citizenship', selText('citizenship')],
+        ['Country of birth', selText('countryOfBirth')],
+        ['ATSI status', selText('atsi')],
+        ['Passport no.', selText('passportNumber')],
+        ['Visa status', selText('visaStatus'), true]
+      ]);
+      html += block('Contact details', 2, [
+        ['Email', selText('email')],
+        ['Mobile', selText('mobile')],
+        ['Alt. phone', selText('altPhone')],
+        ['Address', [selText('addressLine1'), selText('addressLine2'), selText('suburb'), selText('state'), selText('postcode'), selText('country')].filter(Boolean).join(', '), true],
+        ['Emergency contact', [selText('emergencyName'), selText('emergencyRelationship'), selText('emergencyPhone')].filter(Boolean).join(' · '), true]
+      ]);
+      html += block('Academic &amp; English', 3, [
+        ['Highest qualification', selText('highestQual')],
+        ['Institution', selText('institution')],
+        ['Country of study', selText('countryOfStudy')],
+        ['Year completed', selText('yearCompleted')],
+        ['Currently studying', radioVal('stillStudying')],
+        ['Result', [selText('resultType'), selText('resultValue')].filter(Boolean).join(': ')],
+        ['English first language', radioVal('englishFirstLang')],
+        ['English test', needsEnglishTest() ? [selText('englishTest'), selText('englishScore'), selText('englishTestDate')].filter(Boolean).join(' · ') : '', true]
+      ]);
+      html += block('Documents', 4, [
+        ['Academic transcript', fileNames('doc_transcript'), true],
+        ['Proof of identity', fileNames('doc_id'), true],
+        ['English results', fileNames('doc_english'), true],
+        ['CV / résumé', fileNames('doc_cv'), true],
+        ['Statement / proposal', fileNames('doc_statement'), true],
+        ['Other documents', fileNames('doc_other'), true]
+      ]);
+      c.innerHTML = html;
+      c.querySelectorAll('[data-edit]').forEach(function (b) {
+        b.addEventListener('click', function () { goTo(parseInt(b.getAttribute('data-edit'), 10), false); });
+      });
+    }
+
+    // ---------- Draft persistence ----------
+    function collect() {
+      var data = {};
+      form.querySelectorAll('input, select, textarea').forEach(function (el) {
+        if (el.type === 'file') return;
+        if (el.type === 'radio' || el.type === 'checkbox') { if (el.id || el.name) data[el.id || el.name] = el.checked; }
+        else if (el.name || el.id) data[el.id || el.name] = el.value;
+      });
+      // radios store by name -> value
+      ['applicantType', 'studyMode', 'stillStudying', 'englishFirstLang'].forEach(function (n) {
+        data['radio_' + n] = radioVal(n);
+      });
+      data.__files = {};
+      Object.keys(fileStore).forEach(function (k) { data.__files[k] = fileStore[k]; });
+      data.__step = current;
+      return data;
+    }
+    var saveTimer;
+    function saveDraft() {
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(function () {
+        try { localStorage.setItem(DRAFT_KEY, JSON.stringify(collect())); } catch (e) {}
+      }, 250);
+    }
+    function loadDraft() {
+      var raw;
+      try { raw = localStorage.getItem(DRAFT_KEY); } catch (e) { return; }
+      if (!raw) return;
+      var data;
+      try { data = JSON.parse(raw); } catch (e) { return; }
+
+      Object.keys(data).forEach(function (k) {
+        if (k.indexOf('__') === 0 || k.indexOf('radio_') === 0) return;
+        var el = $(k) || form.querySelector('[name="' + k + '"]');
+        if (!el) return;
+        if (el.type === 'checkbox') el.checked = !!data[k];
+        else if (el.type !== 'radio' && el.type !== 'file') el.value = data[k];
+      });
+      ['applicantType', 'studyMode', 'stillStudying', 'englishFirstLang'].forEach(function (n) {
+        var v = data['radio_' + n];
+        if (v) {
+          var r = form.querySelector('input[name="' + n + '"][value="' + v + '"]');
+          if (r) r.checked = true;
+        }
+      });
+      if (data.__files) {
+        fileStore = data.__files;
+        Object.keys(fileStore).forEach(function (id) { renderFileList(id); });
+      }
+      refreshChoiceStates();
+      refreshConditional();
+      // restore docs error-free; note re-upload requirement
+      var note = $('draftNote');
+      if (note) note.innerHTML = 'A saved draft from this browser has been restored. <strong>Please re-attach any documents</strong> — files cannot be stored by your browser for security reasons.';
+    }
+
+    function clearDraft() {
+      try { localStorage.removeItem(DRAFT_KEY); } catch (e) {}
+    }
+    $('clearDraftBtn').addEventListener('click', function () {
+      if (confirm('Clear your saved draft and reset the form?')) {
+        clearDraft();
+        location.reload();
+      }
+    });
+
+    // ---------- Choice card visual state (fallback for :has) ----------
+    function refreshChoiceStates() {
+      form.querySelectorAll('.choice').forEach(function (c) {
+        var inp = c.querySelector('input');
+        if (inp) c.classList.toggle('selected', inp.checked);
+      });
+    }
+
+    // ---------- Live updates ----------
+    form.addEventListener('change', function (e) {
+      var n = e.target.name;
+      if (n === 'applicantType' || n === 'englishFirstLang' || e.target.id === 'studyLevel') refreshConditional();
+      refreshChoiceStates();
+      saveDraft();
+    });
+    form.addEventListener('input', function () { saveDraft(); });
+
+    // ---------- Submit ----------
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!validateStep(5)) return;
+
+      var btn = $('submitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Submitting…';
+
+      // Build the payload that WOULD be sent to a backend.
+      var payload = collect();
+      // ===== INTEGRATION POINT =====
+      // To send to a real backend (Formspree, Power Automate, your API), replace
+      // the simulated success below with a fetch(), e.g.:
+      //   fetch('https://your-endpoint', { method:'POST', body: JSON.stringify(payload) })
+      //     .then(...).catch(...)
+      // Files would need to be sent via FormData with the actual File objects.
+      // =============================
+
+      setTimeout(function () {
+        var ref = 'SFU-2026-' + Math.random().toString(36).slice(2, 8).toUpperCase();
+        try {
+          localStorage.setItem('sfu_application_submitted', JSON.stringify({
+            ref: ref, at: new Date().toISOString(), program: selText('program1'), email: selText('email')
+          }));
+        } catch (err) {}
+        clearDraft();
+
+        var name = [selText('firstName'), selText('familyName')].filter(Boolean).join(' ') || 'applicant';
+        $('confirmName').textContent = name;
+        $('confirmEmailOut').textContent = selText('email') || 'your email';
+        $('refNum').textContent = ref;
+
+        form.hidden = true;
+        document.getElementById('stepper').hidden = true;
+        $('confirmPanel').hidden = false;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 900);
+    });
+
+    // ---------- Init ----------
+    loadDraft();
+    refreshChoiceStates();
+    refreshConditional();
+    var startStep = 0;
+    try {
+      var d = JSON.parse(localStorage.getItem(DRAFT_KEY) || '{}');
+      if (typeof d.__step === 'number') startStep = d.__step;
+    } catch (e) {}
+    goTo(startStep, false);
+  })();
+  </script>
